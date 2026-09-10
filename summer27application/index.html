@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIMBA Summer 2027 &middot; How to Apply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F3864;
+  --navy-deep:#12203C;
+  --gold:#F5A800;
+  --gold-soft:#FFF3D6;
+  --razor:#9D2235;
+  --razor-soft:#FBEBED;
+  --paper:#F4F6FA;
+  --card:#FFFFFF;
+  --ink:#12182B;
+  --ink-mid:#4A5468;
+  --rule:#DCE2EC;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px 80px;}
+
+/* ---------- masthead ---------- */
+header.masthead{
+  background:var(--navy-deep);
+  color:#fff;
+  padding:52px 0 44px;
+  border-bottom:5px solid var(--gold);
+}
+.eyebrow{
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 14px;
+}
+h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2.1rem,5.4vw,3.4rem);
+  line-height:1.05;
+  margin:0 0 18px;
+  letter-spacing:-.01em;
+}
+.standfirst{
+  font-size:clamp(1rem,2.2vw,1.15rem);
+  color:#C8D2E4;
+  max-width:60ch;
+  margin:0;
+}
+.standfirst strong{color:#fff;font-weight:500;}
+
+/* ---------- progress ---------- */
+.meter{
+  margin-top:34px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.meter-track{
+  flex:1 1 240px;
+  height:8px;
+  background:rgba(255,255,255,.16);
+  border-radius:99px;
+  overflow:hidden;
+}
+.meter-fill{
+  height:100%;
+  width:0%;
+  background:var(--gold);
+  border-radius:99px;
+  transition:width .45s cubic-bezier(.2,.7,.3,1);
+}
+.meter-label{
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#C8D2E4;
+  white-space:nowrap;
+}
+.meter-label b{color:var(--gold);font-weight:500;}
+.reset-btn{
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.3);
+  color:#C8D2E4;
+  padding:6px 12px;
+  border-radius:99px;
+  cursor:pointer;
+  transition:border-color .15s,color .15s;
+}
+.reset-btn:hover{border-color:var(--gold);color:var(--gold);}
+.reset-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+/* ---------- hackathon banner ---------- */
+.hackathon{
+  margin-top:-26px;
+  position:relative;
+  z-index:2;
+  background:var(--gold);
+  border-radius:14px;
+  padding:26px 30px;
+  display:flex;
+  gap:26px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  box-shadow:0 10px 30px -16px rgba(31,56,100,.55);
+}
+.hack-when{
+  flex:0 0 auto;
+  border-right:2px solid rgba(18,24,43,.22);
+  padding-right:26px;
+}
+.hack-date{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:2.1rem;
+  line-height:1;
+  font-weight:700;
+  color:var(--navy-deep);
+  display:block;
+}
+.hack-meta{
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--navy-deep);
+  display:block;
+  margin-top:8px;
+  opacity:.8;
+}
+.hack-body{flex:1 1 300px;}
+.hack-body h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1.3rem;
+  font-weight:600;
+  margin:0 0 6px;
+  color:var(--navy-deep);
+}
+.hack-body p{margin:0;color:#3B2E08;font-size:.95rem;max-width:56ch;}
+.hack-note{
+  margin-top:10px !important;
+  font-size:.85rem !important;
+  color:#5C4A12;
+  padding-top:10px;
+  border-top:1px solid rgba(59,46,8,.18);
+}
+
+/* ---------- section headings ---------- */
+.phase{margin-top:56px;}
+.phase-head{margin-bottom:8px;}
+.phase-num{
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-mid);
+  display:block;
+  margin-bottom:6px;
+}
+h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.5rem,3.4vw,2rem);
+  font-weight:600;
+  margin:0 0 8px;
+  letter-spacing:-.01em;
+}
+.phase-note{color:var(--ink-mid);max-width:62ch;margin:0 0 26px;font-size:.97rem;}
+
+/* ---------- two lanes ---------- */
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;}
+.lane{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:14px;
+  overflow:hidden;
+}
+.lane-head{padding:20px 22px 16px;border-bottom:1px solid var(--rule);}
+.lane-tag{
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  display:inline-block;
+  padding:4px 9px;
+  border-radius:4px;
+  margin-bottom:10px;
+}
+.lane-ua .lane-tag{background:var(--razor-soft);color:var(--razor);}
+.lane-cimba .lane-tag{background:#E7ECF6;color:var(--navy);}
+.lane-ua{border-top:5px solid var(--razor);}
+.lane-cimba{border-top:5px solid var(--navy);}
+.lane-head h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1.3rem;
+  font-weight:600;
+  margin:0 0 4px;
+}
+.lane-sub{font-size:.88rem;color:var(--ink-mid);margin:0;}
+
+ol.steps{list-style:none;margin:0;padding:6px 0;}
+ol.steps li{border-bottom:1px solid var(--rule);}
+ol.steps li:last-child{border-bottom:none;}
+
+.step{display:flex;gap:14px;padding:16px 22px;cursor:pointer;transition:background .15s;}
+.step:hover{background:#FAFBFD;}
+.step input{position:absolute;opacity:0;width:0;height:0;}
+.box{
+  flex:0 0 auto;
+  width:22px;height:22px;
+  border:2px solid var(--rule);
+  border-radius:6px;
+  margin-top:2px;
+  display:grid;place-items:center;
+  transition:background .18s,border-color .18s,transform .18s;
+}
+.box svg{width:12px;height:12px;opacity:0;transform:scale(.5);transition:opacity .18s,transform .18s;}
+.step input:checked ~ .box{background:var(--gold);border-color:var(--gold);}
+.step input:checked ~ .box svg{opacity:1;transform:scale(1);}
+.step input:focus-visible ~ .box{outline:3px solid var(--navy);outline-offset:3px;}
+.step-body{flex:1;min-width:0;}
+.step-title{font-weight:700;font-size:1rem;display:block;margin-bottom:3px;letter-spacing:-.005em;}
+.step-detail{font-size:.9rem;color:var(--ink-mid);margin:0;}
+.step input:checked ~ .step-body .step-title{text-decoration:line-through;text-decoration-color:var(--gold);text-decoration-thickness:2px;color:var(--ink-mid);}
+a{color:var(--navy);text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:2px;}
+a:hover{color:var(--razor);}
+.lane-ua a{color:var(--razor);}
+code{
+  font-family:"DM Mono",monospace;
+  font-size:.85em;
+  background:var(--gold-soft);
+  color:var(--ink);
+  padding:1px 5px;
+  border-radius:3px;
+  word-break:break-word;
+}
+
+/* ---------- junction: the signature ---------- */
+.junction{
+  margin-top:26px;
+  position:relative;
+  border-radius:14px;
+  padding:30px 32px;
+  background:#fff;
+  border:2px dashed var(--rule);
+  transition:border-color .5s,background .5s,box-shadow .5s;
+}
+.junction::before{
+  content:"";
+  position:absolute;
+  top:-26px;left:25%;right:25%;
+  height:26px;
+  border-left:2px dashed var(--razor);
+  border-right:2px dashed var(--navy);
+  border-bottom:2px dashed var(--rule);
+  border-bottom-left-radius:14px;
+  border-bottom-right-radius:14px;
+  transition:border-bottom-color .5s;
+}
+.junction.lit{
+  border-color:var(--gold);
+  border-style:solid;
+  background:var(--gold-soft);
+  box-shadow:0 8px 28px -14px rgba(245,168,0,.7);
+}
+.junction.lit::before{border-bottom-color:var(--gold);}
+.junction-tag{
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-mid);
+  margin:0 0 10px;
+}
+.junction h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1.35rem;
+  font-weight:600;
+  margin:0 0 8px;
+}
+.junction p{margin:0;color:var(--ink-mid);max-width:70ch;font-size:.95rem;}
+.junction p + p{margin-top:10px;}
+
+/* ---------- single wide lane ---------- */
+.lane-wide{background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--gold);border-radius:14px;overflow:hidden;}
+.lane-wide ol.steps li .step{padding:18px 24px;}
+
+/* ---------- gotchas ---------- */
+.gotchas{
+  margin-top:56px;
+  background:var(--navy-deep);
+  color:#C8D2E4;
+  border-radius:14px;
+  padding:34px 32px;
+}
+.gotchas h2{color:#fff;margin-bottom:6px;}
+.gotchas .phase-num{color:var(--gold);}
+.gotchas-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;margin-top:24px;}
+.gotcha strong{display:block;color:#fff;font-size:.98rem;margin-bottom:4px;}
+.gotcha p{margin:0;font-size:.9rem;}
+
+/* ---------- parents ---------- */
+.parents{
+  margin-top:26px;
+  border-left:5px solid var(--gold);
+  background:#fff;
+  border-radius:0 14px 14px 0;
+  padding:24px 28px;
+}
+.parents h3{font-family:"Playfair Display",Georgia,serif;font-size:1.15rem;margin:0 0 8px;font-weight:600;}
+.parents p{margin:0 0 10px;font-size:.94rem;color:var(--ink-mid);max-width:72ch;}
+.parents p:last-child{margin-bottom:0;}
+
+footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);font-size:.85rem;color:var(--ink-mid);}
+footer p{margin:0 0 6px;}
+.footer-lead{max-width:70ch;font-size:.92rem;margin-bottom:18px;}
+ul.faculty{
+  list-style:none;
+  margin:0 0 20px;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:12px 28px;
+}
+ul.faculty li{display:flex;flex-direction:column;line-height:1.4;}
+ul.faculty span{font-weight:700;color:var(--ink);}
+ul.faculty a{font-size:.85rem;word-break:break-all;}
+.colophon{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;}
+
+@media (max-width:820px){
+  .lanes{grid-template-columns:1fr;}
+  .gotchas-grid{grid-template-columns:1fr;}
+  .junction::before{left:15%;right:15%;}
+  header.masthead{padding:38px 0 34px;}
+  .wrap{padding:0 18px 60px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+@media print{
+  body{background:#fff;font-size:11pt;}
+  header.masthead{background:#fff;color:#000;border-bottom:3px solid var(--gold);padding:0 0 16px;}
+  .eyebrow{color:var(--razor);}
+  .standfirst{color:#333;}
+  .meter{display:none;}
+  .lanes{grid-template-columns:1fr 1fr;gap:14px;}
+  .lane,.lane-wide,.junction,.parents,.hackathon{break-inside:avoid;box-shadow:none;}
+  .hackathon{margin-top:20px;border:2px solid var(--gold);background:var(--gold-soft);}
+  .gotchas{background:#fff;color:#000;border:1px solid var(--rule);}
+  .gotchas h2,.gotcha strong{color:#000;}
+  .phase{margin-top:26px;}
+  a{color:#000;}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">CIMBA Italy &middot; Summer 2027 &middot; University of Arkansas</p>
+    <h1>Two applications.<br>One spot in Italy.</h1>
+    <p class="standfirst">Getting to CIMBA means applying in two places: <strong>Hogs Abroad</strong> at the U of A, and <strong>CIMBA</strong> through the University of Iowa. The smoothest way through is to work on both at the same time. Follow the two columns below and check things off as you go.</p>
+    <div class="meter">
+      <span class="meter-label">Progress <b><span id="done">0</span>/<span id="total">0</span></b></span>
+      <div class="meter-track"><div class="meter-fill" id="fill"></div></div>
+      <button type="button" class="reset-btn" id="resetBtn">Reset checklist</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hackathon">
+    <div class="hack-when">
+      <span class="hack-date">Oct 22</span>
+      <span class="hack-meta">4:30&ndash;6:00 pm<br>RCED 117</span>
+    </div>
+    <div class="hack-body">
+      <h3>Come to the application hackathon</h3>
+      <p>Bring your laptop and knock out both applications in one sitting, with professors there to answer questions as you go. We'd love to see you there, whether you're well underway on your application or you haven't started!</p>
+      <p class="hack-note">Get the most out of the day: complete your Study Abroad 101 session before the hackathon. That session unlocks your Hogs Abroad application, so you'll have more to work on when you arrive.</p>
+    </div>
+  </section>
+
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">Phase one &middot; work on both columns together</span>
+      <h2>Apply in both places</h2>
+    </div>
+    <p class="phase-note">You will need both applications, so it helps to keep them moving together. Each one is staged, which means the forms you see on day one are only part of what you will eventually complete. More will load as you finish earlier steps.</p>
+
+    <div class="lanes">
+
+      <!-- LANE A -->
+      <div class="lane lane-ua">
+        <div class="lane-head">
+          <span class="lane-tag">Column A</span>
+          <h3>University of Arkansas</h3>
+          <p class="lane-sub">Through Hogs Abroad</p>
+        </div>
+        <ol class="steps">
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="ua-101">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Book your Study Abroad 101 session</span>
+              <p class="step-detail">A required group advising session with a peer advisor, and the first thing to get on your calendar since your Hogs Abroad application opens up after it. Aim to finish this by <strong>September 30</strong> so you're ready to make real progress at the October 22 hackathon. <a href="https://uark.starfishsolutions.com/starfish-ops/instructor/serviceCatalog.html#/service/5040569/schedule" target="_blank" rel="noopener">Schedule your session</a>.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="ua-login">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Log in to Hogs Abroad once, first</span>
+              <p class="step-detail">Go to <a href="https://hogsabroad.uark.edu" target="_blank" rel="noopener">hogsabroad.uark.edu</a> and sign in before you click any direct program link. Opening a program page before your first login makes the site behave strangely.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="ua-start">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Start your application at the session</span>
+              <p class="step-detail">Bring your laptop. On the <a href="https://uark.via-trm.com/program_brochure/36568" target="_blank" rel="noopener">CIMBA program page</a>, either favorite CIMBA or click Apply to open the application.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="ua-eligibility">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Wait for your eligibility check</span>
+              <p class="step-detail">Study Abroad reviews your GPA, conduct record, and a few other items. Nothing for you to do here except watch your email.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="ua-forms">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Complete the forms that unlock next</span>
+              <p class="step-detail">Once you clear the check, your status becomes <strong>conditionally accepted</strong> and a new batch of forms appears. Instructions arrive from <code>messages@via-trm.com</code>, so watch for that sender.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="ua-nextsteps">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Attend the Group Next Steps meeting</span>
+              <p class="step-detail">Required. Hogs Abroad will tell you when. This meeting walks you through DICE and everything still left in your application.</p>
+            </span>
+          </label></li>
+        </ol>
+      </div>
+
+      <!-- LANE B -->
+      <div class="lane lane-cimba">
+        <div class="lane-head">
+          <span class="lane-tag">Column B</span>
+          <h3>CIMBA</h3>
+          <p class="lane-sub">Through CIMBA / The University of Iowa</p>
+        </div>
+        <ol class="steps">
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="cimba-apply">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Apply at cimbaitaly.com</span>
+              <p class="step-detail">The <a href="https://www.cimbaitaly.com" target="_blank" rel="noopener">CIMBA site</a> hands you off to the University of Iowa application portal. Iowa administers CIMBA, so an Iowa login screen is expected and correct.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="cimba-fee">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Pay the $40 application fee</span>
+              <p class="step-detail">Paid to the University of Iowa when you submit your application. The fee is nonrefundable, so it is worth submitting once you feel good about applying.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="cimba-transcript">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Send your official transcript to Iowa</span>
+              <p class="step-detail">Ask the <a href="https://registrar.uark.edu/student-records/transcript-request.php" target="_blank" rel="noopener">U of A registrar</a> to send your official Arkansas transcript to <code>admissions@uiowa.edu</code>. This one is easy to overlook, since it is a separate request you make yourself.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="cimba-letter">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Receive your CIMBA acceptance letter</span>
+              <p class="step-detail">Congratulations! Download and save the letter as a file somewhere you can find it, since you will upload it to Hogs Abroad in the next step.</p>
+            </span>
+          </label></li>
+
+          <li><label class="step">
+            <input type="checkbox" class="tick" data-key="cimba-intent">
+            <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="step-body">
+              <span class="step-title">Submit the CIMBA Intent to Enroll form</span>
+              <p class="step-detail">This is the form that guarantees your spot in CIMBA Summer 2027, so it is worth doing right away once you are admitted.</p>
+            </span>
+          </label></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- JUNCTION -->
+    <div class="junction" id="junction">
+      <p class="junction-tag">Where the two columns meet</p>
+      <h3>Upload your CIMBA acceptance letter to Hogs Abroad</h3>
+      <p><strong>Once you've received an acceptance letter from CIMBA, upload it to Hogs Abroad.</strong> This is the step that connects the two applications, and we don't want you to miss it! It's what moves your U of A status from <strong>conditionally accepted</strong> to <strong>committed</strong>.</p>
+      <p>Until you do it, Arkansas does not know you got in, and your application sits unfinished.</p>
+      <label class="step" style="padding:18px 0 0;">
+        <input type="checkbox" class="tick" id="junctionTick" data-key="junction-upload">
+        <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="step-body"><span class="step-title">Acceptance letter uploaded, status now committed</span></span>
+      </label>
+    </div>
+  </section>
+
+  <!-- PHASE TWO -->
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">Phase two &middot; after your spot is guaranteed</span>
+      <h2>Lock in your classes and get ready to go</h2>
+    </div>
+    <p class="phase-note">Your spot is secured. A few things are still left, and these three are the ones that shape which classes you get and how your credit transfers back to Arkansas.</p>
+
+    <div class="lane-wide">
+      <ol class="steps">
+        <li><label class="step">
+          <input type="checkbox" class="tick" data-key="p2-emails">
+          <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="step-body">
+            <span class="step-title">Read both acceptance emails all the way through</span>
+            <p class="step-detail">The CIMBA email and the Hogs Abroad email each carry deadlines, costs, pre-departure requirements, and expectations that appear nowhere else.</p>
+          </span>
+        </label></li>
+
+        <li><label class="step">
+          <input type="checkbox" class="tick" data-key="p2-dice">
+          <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="step-body">
+            <span class="step-title">Submit your DICE form in January</span>
+            <p class="step-detail">DICE pre-approves your CIMBA classes for transfer credit at Arkansas, and it needs to be done <strong>before</strong> you request classes with CIMBA. Approval can take anywhere from one to twelve weeks, so January gives you room. Go ahead and pre-approve six courses so you have backups, since popular classes do fill up. The <a href="https://uark.sharepoint.com/teams/StudyAbroad/SitePages/DICE-Student-Instruction-Guide.aspx" target="_blank" rel="noopener">DICE Student Guide</a> walks you through it.</p>
+          </span>
+        </label></li>
+
+        <li><label class="step">
+          <input type="checkbox" class="tick" data-key="p2-orientation">
+          <span class="box"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5 6 12.5 14 3.5" stroke="#12182B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="step-body">
+            <span class="step-title">Attend Hogs Abroad pre-departure orientation</span>
+            <p class="step-detail">Held in <strong>April</strong>, with the date and time to be announced. Required before you leave. Covers travel logistics, health and safety, and what to expect once you are on the ground in Italy.</p>
+          </span>
+        </label></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GOTCHAS -->
+  <section class="gotchas">
+    <span class="phase-num">A few friendly heads-ups</span>
+    <h2>Things that surprise people</h2>
+    <div class="gotchas-grid">
+      <div class="gotcha">
+        <strong>The application grows as you go</strong>
+        <p>What you see when you first open Hogs Abroad is only part of the total. New forms load as you finish earlier ones, so keep checking back even after a screen looks complete.</p>
+      </div>
+      <div class="gotcha">
+        <strong>Keep both applications moving</strong>
+        <p>It is tempting to wait and hear back from one before starting the other. Working on them side by side gives you a lot more breathing room.</p>
+      </div>
+      <div class="gotcha">
+        <strong>Watch your email</strong>
+        <p>Almost every prompt arrives by email, much of it from <code>messages@via-trm.com</code>. Add that address to your contacts, and make sure the address on file with Hogs Abroad is one you check often.</p>
+      </div>
+      <div class="gotcha">
+        <strong>Give DICE plenty of time</strong>
+        <p>Approval can take up to twelve weeks, and you cannot register for classes until it clears. Submitting in January keeps you comfortably ahead of it.</p>
+      </div>
+      <div class="gotcha">
+        <strong>Pre-approve six classes on DICE</strong>
+        <p>Listing backups now saves you a lot of trouble later. If a first-choice class fills and you have no pre-approved alternate, you would have to start that approval over.</p>
+      </div>
+      <div class="gotcha">
+        <strong>Admitted and enrolled are different</strong>
+        <p>Getting into CIMBA is wonderful news, and your spot is held once you submit the Intent to Enroll form. Uploading your acceptance letter then wraps up the Arkansas side.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARENTS -->
+  <section class="parents">
+    <h3>If you are a parent helping a student stay on track</h3>
+    <p>Two checkpoints are worth asking about, since both involve waiting periods that are easy to underestimate. The first is the <strong>Study Abroad 101 session</strong>, which has to be scheduled in advance and tends to fill up as deadlines get closer. The second is the <strong>DICE form</strong> in January, where approval can take up to twelve weeks and class registration waits on it.</p>
+    <p>A helpful question to ask is "which of the two applications are you further along on, and what is the next form waiting on you." Because there are two columns to finish, students sometimes feel done once one of them is complete.</p>
+    <p>The October 22 hackathon is also a great nudge. Students who come tend to leave with most of the hard parts behind them.</p>
+  </section>
+
+  <footer>
+    <p class="footer-lead">Questions about the Hogs Abroad side are best answered by the <a href="https://hogsabroad.uark.edu" target="_blank" rel="noopener">Study Abroad office</a>. For anything about CIMBA itself, the courses, or life in Paderno del Grappa, reach out to any of us. We are happy to help.</p>
+    <ul class="faculty">
+      <li><span>Dr. Molly Rapert</span><a href="mailto:mrapert@walton.uark.edu">mrapert@walton.uark.edu</a></li>
+      <li><span>Dr. Kim Petrone</span><a href="mailto:kpetrone@walton.uark.edu">kpetrone@walton.uark.edu</a></li>
+      <li><span>Dr. Jenni Dinger</span><a href="mailto:jdinger@walton.uark.edu">jdinger@walton.uark.edu</a></li>
+      <li><span>Dr. Sarah Grace</span><a href="mailto:sgrace@walton.uark.edu">sgrace@walton.uark.edu</a></li>
+    </ul>
+    <p class="colophon">Sam M. Walton College of Business &middot; University of Arkansas</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'cimba2027-checklist';
+  var ticks = document.querySelectorAll('.tick');
+  var fill = document.getElementById('fill');
+  var done = document.getElementById('done');
+  var junction = document.getElementById('junction');
+  var junctionTick = document.getElementById('junctionTick');
+  document.getElementById('total').textContent = ticks.length;
+
+  function loadState(){
+    try{
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    }catch(e){
+      return {};
+    }
+  }
+
+  function saveState(){
+    var state = {};
+    ticks.forEach(function(t){
+      if(t.dataset.key) state[t.dataset.key] = t.checked;
+    });
+    try{
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }catch(e){
+      // Private browsing or storage disabled: progress just won't persist this visit.
+    }
+  }
+
+  function restoreState(){
+    var state = loadState();
+    ticks.forEach(function(t){
+      if(t.dataset.key && state[t.dataset.key]) t.checked = true;
+    });
+  }
+
+  function update(){
+    var n = 0;
+    ticks.forEach(function(t){ if(t.checked) n++; });
+    done.textContent = n;
+    fill.style.width = (n / ticks.length * 100) + '%';
+
+    // The junction lights up once both columns are complete.
+    var laneDone = true;
+    document.querySelectorAll('.lanes .tick').forEach(function(t){ if(!t.checked) laneDone = false; });
+    junction.classList.toggle('lit', laneDone && !junctionTick.checked);
+
+    saveState();
+  }
+
+  restoreState();
+  ticks.forEach(function(t){ t.addEventListener('change', update); });
+  update();
+
+  var resetBtn = document.getElementById('resetBtn');
+  if(resetBtn){
+    resetBtn.addEventListener('click', function(){
+      if(!confirm('Clear all checked items? This cannot be undone.')) return;
+      ticks.forEach(function(t){ t.checked = false; });
+      try{ localStorage.removeItem(STORAGE_KEY); }catch(e){}
+      update();
+    });
+  }
+})();
+</script>
+</body>
+</html>
