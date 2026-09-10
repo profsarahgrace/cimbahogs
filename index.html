@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIMBA Italy &middot; University of Arkansas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F3864;
+  --navy-deep:#12203C;
+  --gold:#F5A800;
+  --gold-soft:#FFF3D6;
+  --razor:#9D2235;
+  --razor-soft:#FBEBED;
+  --paper:#F4F6FA;
+  --card:#FFFFFF;
+  --ink:#12182B;
+  --ink-mid:#4A5468;
+  --rule:#DCE2EC;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 70px;}
+
+/* ---------- masthead ---------- */
+header.masthead{
+  background:var(--navy-deep);
+  color:#fff;
+  padding:56px 0 46px;
+  border-bottom:5px solid var(--gold);
+  text-align:center;
+}
+.eyebrow{
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 16px;
+}
+h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2.4rem,7vw,3.6rem);
+  line-height:1.05;
+  margin:0 0 16px;
+  letter-spacing:-.01em;
+}
+.standfirst{
+  font-size:clamp(1rem,2.4vw,1.15rem);
+  color:#C8D2E4;
+  max-width:46ch;
+  margin:0 auto 34px;
+}
+.cta{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--navy-deep);
+  font-weight:700;
+  font-size:1.05rem;
+  padding:16px 36px;
+  border-radius:99px;
+  text-decoration:none;
+  letter-spacing:-.005em;
+  box-shadow:0 10px 26px -12px rgba(245,168,0,.6);
+  transition:transform .15s, box-shadow .15s;
+}
+.cta:hover{transform:translateY(-1px);box-shadow:0 14px 30px -12px rgba(245,168,0,.7);}
+.cta-secondary{
+  display:block;
+  margin-top:16px;
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#8A97B3;
+  text-decoration:none;
+}
+.cta-secondary:hover{color:var(--gold);}
+
+/* ---------- anniversary ---------- */
+.anniversary{
+  margin-top:-30px;
+  position:relative;
+  z-index:2;
+  background:#fff;
+  border:2px dashed var(--gold);
+  border-radius:14px;
+  padding:26px 28px;
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  box-shadow:0 12px 30px -18px rgba(18,32,60,.35);
+}
+.anniversary-number{
+  flex:0 0 auto;
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:700;
+  font-size:3.2rem;
+  line-height:1;
+  color:var(--razor);
+}
+.anniversary-body .eyebrow{color:var(--ink-mid);margin-bottom:8px;}
+.anniversary-body h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1.25rem;
+  font-weight:600;
+  margin:0 0 8px;
+  color:var(--ink);
+}
+.anniversary-body p:last-child{margin:0;color:var(--ink-mid);font-size:.92rem;max-width:52ch;}
+
+/* ---------- dates ---------- */
+.dates{margin-top:52px;}
+.dates-head{text-align:center;margin-bottom:26px;}
+.dates-head .eyebrow{color:var(--ink-mid);}
+h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.5rem,4vw,1.9rem);
+  font-weight:600;
+  margin:0;
+  letter-spacing:-.01em;
+}
+.date-list{display:flex;flex-direction:column;gap:12px;}
+.date-card{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-left:5px solid var(--gold);
+  border-radius:10px;
+  padding:16px 20px;
+  display:flex;
+  gap:18px;
+  align-items:baseline;
+}
+.date-when{
+  flex:0 0 auto;
+  font-family:"DM Mono",monospace;
+  font-weight:500;
+  font-size:.92rem;
+  color:var(--navy);
+  min-width:9ch;
+}
+.date-what{font-size:.96rem;}
+.date-what strong{display:block;font-weight:700;margin-bottom:2px;}
+.date-what span{color:var(--ink-mid);font-size:.88rem;}
+
+/* ---------- follow ---------- */
+.follow{
+  margin-top:52px;
+  text-align:center;
+  background:var(--gold-soft);
+  border-radius:14px;
+  padding:34px 28px;
+}
+.follow .eyebrow{color:var(--razor);}
+.follow-copy{
+  color:var(--ink-mid);
+  max-width:48ch;
+  margin:10px auto 20px;
+  font-size:.95rem;
+}
+.ig-link{
+  display:inline-block;
+  background:var(--navy-deep);
+  color:#fff;
+  font-weight:700;
+  font-size:.95rem;
+  padding:12px 28px;
+  border-radius:99px;
+  text-decoration:none;
+}
+.ig-link:hover{background:var(--razor);}
+
+/* ---------- footer ---------- */
+footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--rule);font-size:.85rem;color:var(--ink-mid);text-align:center;}
+.faculty{
+  list-style:none;margin:0 0 16px;padding:0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;
+}
+.faculty li{display:flex;flex-direction:column;}
+.faculty span{font-weight:700;color:var(--ink);font-size:.85rem;}
+.faculty a{color:var(--navy);font-size:.8rem;text-decoration:none;}
+.faculty a:hover{color:var(--razor);}
+.colophon{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;}
+
+@media (max-width:520px){
+  .date-card{flex-direction:column;gap:4px;}
+  header.masthead{padding:44px 0 36px;}
+  .anniversary{flex-direction:column;align-items:flex-start;text-align:left;margin-top:-20px;}
+  .anniversary-number{font-size:2.4rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Celebrating 30 Years of CIMBA &amp; the University of Arkansas</p>
+    <h1>Join Thousands of CimbaHogs</h1>
+    <p class="standfirst">Thirty years of Arkansas students studying business abroad in Paderno del Grappa, Italy. Applications for Summer 2027 are open now.</p>
+    <a class="cta" href="/summer27application/">Start Your Application</a>
+    <a class="cta-secondary" href="https://www.cimbaitaly.com/study-abroad" target="_blank" rel="noopener">Learn more about CIMBA &rarr;</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="anniversary">
+    <div class="anniversary-number">30</div>
+    <div class="anniversary-body">
+      <p class="eyebrow">Tuesday, September 22 &middot; 10:30&ndash;12:30 PM</p>
+      <h3>Happy 30th, CIMBA &amp; UA!</h3>
+      <p>Drop by the WCOB third floor atrium for cake celebrating 30 years of collaboration between CIMBA and the University of Arkansas &mdash; the longest-running program taking Walton students abroad. All majors, all years welcome.</p>
+    </div>
+  </section>
+
+  <section class="dates">
+    <div class="dates-head">
+      <p class="eyebrow">Mark your calendar</p>
+      <h2>Key dates for Summer 2027</h2>
+    </div>
+    <div class="date-list">
+      <div class="date-card">
+        <span class="date-when">Sept 30</span>
+        <span class="date-what"><strong>Study Abroad 101 session done</strong><span>Complete this before the hackathon so you're ready to move fast</span></span>
+      </div>
+      <div class="date-card">
+        <span class="date-when">Oct 22</span>
+        <span class="date-what"><strong>Application Hackathon</strong><span>4:30&ndash;6:00 pm &middot; RCED 117 &middot; bring your laptop</span></span>
+      </div>
+      <div class="date-card">
+        <span class="date-when">January</span>
+        <span class="date-what"><strong>DICE form due</strong><span>Pre-approves your CIMBA classes for transfer credit</span></span>
+      </div>
+      <div class="date-card">
+        <span class="date-when">April</span>
+        <span class="date-what"><strong>Pre-departure orientation</strong><span>Date and time to be announced</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow">
+    <p class="eyebrow">Follow along</p>
+    <h2>See CIMBA life as it happens</h2>
+    <p class="follow-copy">Professor Molly Rapert shares day-to-day moments from Paderno del Grappa &mdash; campus life, day trips, and what a CIMBA summer actually looks like.</p>
+    <a class="ig-link" href="https://www.instagram.com/cimbamolly" target="_blank" rel="noopener">Follow @cimbamolly on Instagram &rarr;</a>
+  </section>
+
+  <footer>
+    <ul class="faculty">
+      <li><span>Dr. Molly Rapert</span><a href="mailto:mrapert@walton.uark.edu">mrapert@walton.uark.edu</a></li>
+      <li><span>Dr. Kim Petrone</span><a href="mailto:kpetrone@walton.uark.edu">kpetrone@walton.uark.edu</a></li>
+      <li><span>Dr. Jenni Dinger</span><a href="mailto:jdinger@walton.uark.edu">jdinger@walton.uark.edu</a></li>
+      <li><span>Dr. Sarah Grace</span><a href="mailto:sgrace@walton.uark.edu">sgrace@walton.uark.edu</a></li>
+    </ul>
+    <p class="colophon">University of Arkansas &middot; CIMBA Italy</p>
+  </footer>
+</div>
+
+</body>
+</html>
