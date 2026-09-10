@@ -120,6 +120,86 @@ h1{
 }
 .anniversary-body p:last-child{margin:0;color:var(--ink-mid);font-size:.92rem;max-width:52ch;}
 
+/* ---------- scrapbook ---------- */
+.scrapbook{margin-top:56px;}
+.scrapbook-head{text-align:center;margin-bottom:8px;}
+.scrapbook-copy{color:var(--ink-mid);max-width:50ch;margin:10px auto 0;font-size:.95rem;}
+.scrapbook-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px 22px;
+  margin-top:44px;
+  padding:14px 24px 34px;
+  align-items:start;
+}
+.photo-card{
+  position:relative;
+  aspect-ratio:1/1;
+  background:#fff;
+  padding:8px 8px 24px;
+  box-shadow:0 10px 22px -8px rgba(18,32,60,.32);
+  transition:transform .2s;
+}
+.photo-card:hover{transform:scale(1.05) rotate(0deg) !important;z-index:5;}
+.photo-card::before{
+  content:'';
+  position:absolute;
+  top:-9px;left:50%;
+  width:44px;height:16px;
+  background:rgba(245,168,0,.55);
+  transform:translateX(-50%) rotate(-3deg);
+  box-shadow:0 2px 4px rgba(0,0,0,.15);
+}
+.photo-fill{
+  width:100%;height:100%;
+  display:block;
+  overflow:hidden;
+}
+.photo-fill img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+}
+.photo-card.retro .photo-fill img{filter:sepia(18%) saturate(0.92) contrast(1.03);}
+.rotate-1{transform:rotate(-4deg);}
+.rotate-2{transform:rotate(3deg);}
+.rotate-3{transform:rotate(2deg);}
+.rotate-4{transform:rotate(-3deg);}
+.rotate-5{transform:rotate(-2deg);}
+.rotate-6{transform:rotate(4deg);}
+.doodle{position:absolute;pointer-events:none;z-index:4;}
+.doodle path{stroke:var(--razor);}
+.doodle-circle{top:-26px;left:1%;width:150px;height:120px;}
+.doodle-arrow{bottom:-6px;right:2%;width:140px;height:90px;}
+.note-card{
+  position:relative;
+  background:#FFF8EC;
+  padding:20px 18px 18px;
+  box-shadow:0 10px 22px -8px rgba(18,32,60,.28);
+  border:1px solid rgba(0,0,0,.04);
+}
+.note-card::before{
+  content:'';
+  position:absolute;
+  top:-9px;left:50%;
+  width:18px;height:18px;
+  border-radius:50%;
+  background:var(--razor);
+  transform:translateX(-50%);
+  box-shadow:0 2px 4px rgba(0,0,0,.2);
+}
+.note-card h4{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1rem;
+  font-weight:600;
+  color:var(--navy);
+  margin:4px 0 10px;
+}
+.note-card ul{margin:0;padding-left:18px;}
+.note-card li{font-size:.82rem;color:var(--ink-mid);margin-bottom:6px;line-height:1.4;}
+.note-card li:last-child{margin-bottom:0;}
+
 /* ---------- dates ---------- */
 .dates{margin-top:52px;}
 .dates-head{text-align:center;margin-bottom:26px;}
@@ -198,6 +278,8 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--rule);font-si
   header.masthead{padding:44px 0 36px;}
   .anniversary{flex-direction:column;align-items:flex-start;text-align:left;margin-top:-20px;}
   .anniversary-number{font-size:2.4rem;}
+  .scrapbook-grid{grid-template-columns:repeat(2,1fr);gap:24px 16px;}
+  .doodle{display:none;}
 }
 </style>
 </head>
@@ -220,6 +302,66 @@ footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--rule);font-si
       <p class="eyebrow">Tuesday, September 22 &middot; 10:30&ndash;12:30 PM</p>
       <h3>Happy 30th, CIMBA &amp; UA!</h3>
       <p>Drop by the WCOB third floor atrium for cake celebrating 30 years of collaboration between CIMBA and the University of Arkansas &mdash; the longest-running program taking Walton students abroad. All majors, all years welcome.</p>
+    </div>
+  </section>
+
+  <section class="scrapbook">
+    <div class="scrapbook-head">
+      <p class="eyebrow">Thirty years of memories</p>
+      <h2>The CimbaHogs Scrapbook</h2>
+      <p class="scrapbook-copy">From the first Arkansas cohort in Paderno del Grappa to today &mdash; plus a few reasons cimbahogs keep coming back for more.</p>
+    </div>
+    <div class="scrapbook-grid">
+      <svg class="doodle doodle-circle" viewBox="0 0 150 120" fill="none" aria-hidden="true">
+        <path d="M75,10 C110,8 138,32 135,62 C132,95 100,112 68,108 C32,104 8,78 14,48 C19,22 45,12 75,10 Z" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <svg class="doodle doodle-arrow" viewBox="0 0 140 90" fill="none" aria-hidden="true">
+        <path d="M8,70 C40,20 85,12 128,22" stroke-width="4" stroke-linecap="round"/>
+        <path d="M112,10 L128,22 L110,34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="photo-card retro rotate-1"><span class="photo-fill"><img src="images/scrap-retro-1.jpg" alt="CIMBA students with backpacks, traveling in Italy" loading="lazy"></span></div>
+      <div class="note-card rotate-2">
+        <h4>Your Home Base in Italy</h4>
+        <ul>
+          <li>A dedicated campus, shared with Italian university students</li>
+          <li>An authentic, non-touristy small town to call home for a summer</li>
+          <li>Constant field trips, corporate visits, and hands-on classroom time</li>
+        </ul>
+      </div>
+      <div class="photo-card modern rotate-3"><span class="photo-fill"><img src="images/scrap-modern-1.jpg" alt="CIMBA group photo on the campus grounds" loading="lazy"></span></div>
+      <div class="note-card rotate-4">
+        <h4>See Europe, Your Way</h4>
+        <ul>
+          <li>Travel weekends to explore Europe on your own</li>
+          <li>Or stay close and discover the small towns nearby</li>
+          <li>Meet students from other universities along the way</li>
+        </ul>
+      </div>
+      <div class="photo-card retro rotate-5"><span class="photo-fill"><img src="images/scrap-retro-2.jpg" alt="CIMBA students at a group dinner in Italy" loading="lazy"></span></div>
+      <div class="note-card rotate-1">
+        <h4>Classes That Actually Transfer</h4>
+        <ul>
+          <li>A wide range of classes that transfer seamlessly back to UA</li>
+          <li>Taught by four UA faculty: Professors Rapert, Petrone, Dinger &amp; Grace</li>
+          <li>Choose 4 weeks (6 credit hours) or a full semester (15 hours in 12 weeks)</li>
+          <li>Timed so you're home in time for most internships</li>
+        </ul>
+      </div>
+      <div class="photo-card modern rotate-6"><span class="photo-fill"><img src="images/scrap-modern-2.jpg" alt="CIMBA students on a corporate site visit in Italy" loading="lazy"></span></div>
+      <div class="note-card rotate-3">
+        <h4>All Years, All Majors</h4>
+        <ul>
+          <li>Bring your friends, even from a different major or a different school</li>
+          <li>Part of a 30-year partnership between CIMBA and the University of Arkansas</li>
+          <li>Plus so many more reasons cimbahogs keep coming back</li>
+        </ul>
+      </div>
+      <div class="photo-card retro rotate-3"><span class="photo-fill"><img src="images/scrap-retro-3.jpg" alt="CIMBA students on a travel weekend in Dublin" loading="lazy"></span></div>
+      <div class="photo-card modern rotate-5"><span class="photo-fill"><img src="images/scrap-modern-3.jpg" alt="CIMBA students exploring a local Italian shop" loading="lazy"></span></div>
+      <div class="photo-card retro rotate-2"><span class="photo-fill"><img src="images/scrap-retro-4.jpg" alt="Two CIMBA students on a bridge in Venice" loading="lazy"></span></div>
+      <div class="photo-card modern rotate-4"><span class="photo-fill"><img src="images/scrap-modern-4.jpg" alt="CIMBA students making the Arkansas hand sign together" loading="lazy"></span></div>
+      <div class="photo-card retro rotate-6"><span class="photo-fill"><img src="images/scrap-retro-5.jpg" alt="CIMBA student reading a marketing textbook at an Italian cafe" loading="lazy"></span></div>
+      <div class="photo-card retro rotate-4"><span class="photo-fill"><img src="images/scrap-retro-6.jpg" alt="Large group of CIMBA students and staff on a hillside in Italy" loading="lazy"></span></div>
     </div>
   </section>
 
