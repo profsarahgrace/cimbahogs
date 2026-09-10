@@ -1,0 +1,21 @@
+# CimbaHogs
+
+> CimbaHogs is a public information site for University of Arkansas students and families considering CIMBA Italy study abroad in Paderno del Grappa, Italy.
+
+## Core pages
+
+- [CimbaHogs home](https://cimbahogs.com/): CIMBA Italy program highlights, the University of Arkansas connection, Summer 2027 dates, and thirty years of CimbaHogs memories.
+- [Summer 2027 application guide](https://cimbahogs.com/summer27application/): Step-by-step guidance for completing the University of Arkansas Hogs Abroad process and the CIMBA application.
+
+## Program context
+
+- CIMBA Italy offers study-abroad programming in Paderno del Grappa, Italy.
+- University of Arkansas students complete both the Hogs Abroad process and the CIMBA application process.
+- CIMBA is administered through the University of Iowa; the application guide explains how the two application paths connect.
+- CimbaHogs is designed for University of Arkansas students and their families.
+
+## Relevant primary sources
+
+- [CIMBA Italy](https://www.cimbaitaly.com/)
+- [University of Iowa — CIMBA Italy](https://students.tippie.uiowa.edu/undergraduates/tippie-rise/study-abroad/locations/cimba-italy)
+- [University of Arkansas Hogs Abroad](https://hogsabroad.uark.edu/)
