@@ -525,17 +525,21 @@ ul.faculty span{
   }
 
   .junction{
-    padding:28px 24px;
+    padding:56px 24px 28px;
   }
 
   .junction::after{
-    position:relative;
+    position:absolute;
     display:block;
-    top:auto;
-    right:auto;
+    top:12px;
+    right:14px;
     width:max-content;
-    margin:-47px 0 20px auto;
+    margin:0;
+    padding:2px 8px;
+    font-size:1.3rem;
+    line-height:1;
     background:var(--paper);
+    z-index:2;
   }
 
   .gotchas{
