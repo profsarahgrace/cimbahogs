@@ -1,0 +1,577 @@
+/* =========================================================
+   CimbaHogs Summer 2027 Application — Joyful Editorial Sibling
+   Load this AFTER the existing <style> block.
+   It intentionally preserves all markup, checklist logic, and JS.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,650;9..144,800;9..144,900&display=swap');
+
+:root{
+  --navy:#1F3864;
+  --navy-deep:#12203C;
+  --gold:#F5A800;
+  --butter:#FFD84D;
+  --razor:#9D2235;
+  --razor-soft:#FBEBED;
+  --coral:#F26B5B;
+  --sky:#BFD7F2;
+  --mint:#CDE7D7;
+  --pink:#F7DADF;
+  --cream:#FFF8EC;
+  --paper:#F7F3EB;
+  --card:#FFFFFF;
+  --ink:#171A24;
+  --ink-mid:#525A6B;
+  --rule:#DED8CD;
+}
+
+body{
+  background:
+    radial-gradient(circle at 12% 10%, rgba(245,168,0,.07) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 90% 28%, rgba(157,34,53,.05) 0 2px, transparent 2.5px),
+    var(--paper);
+  background-size:52px 52px, 68px 68px, auto;
+  color:var(--ink);
+}
+
+.wrap{
+  max-width:1080px;
+  padding-left:24px;
+  padding-right:24px;
+}
+
+::selection{
+  background:var(--butter);
+  color:var(--navy-deep);
+}
+
+/* ---------- shared type ---------- */
+
+h1,h2,.hack-date,.hack-body h3,.lane-head h3,.junction h3,.parents h3{
+  font-family:"Fraunces",Georgia,serif;
+}
+
+h1{
+  font-weight:900;
+  letter-spacing:-.045em;
+}
+
+h2{
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+
+.eyebrow,
+.phase-num,
+.lane-tag,
+.junction-tag,
+.meter-label,
+.reset-btn,
+.colophon{
+  font-family:"DM Mono",monospace;
+}
+
+/* ---------- hero: same family as homepage, calmer ---------- */
+
+header.masthead{
+  position:relative;
+  overflow:hidden;
+  background:var(--cream);
+  color:var(--navy-deep);
+  padding:64px 0 66px;
+  border-top:10px solid var(--razor);
+  border-bottom:0;
+}
+
+header.masthead::after{
+  content:"";
+  position:absolute;
+  left:-3%;
+  right:-3%;
+  bottom:-22px;
+  height:42px;
+  background:var(--razor);
+  transform:rotate(-1deg);
+  transform-origin:left center;
+}
+
+header.masthead .wrap{
+  position:relative;
+  z-index:2;
+}
+
+header.masthead .eyebrow{
+  display:inline-block;
+  color:var(--razor);
+  background:#fff;
+  border:1px solid rgba(157,34,53,.14);
+  padding:7px 11px;
+  margin-bottom:22px;
+  box-shadow:4px 4px 0 var(--pink);
+  transform:rotate(-.6deg);
+  font-size:10px;
+}
+
+header.masthead h1{
+  color:var(--navy-deep);
+  font-size:clamp(3rem,7vw,5rem);
+  line-height:.93;
+  margin-bottom:20px;
+  max-width:12ch;
+}
+
+header.masthead h1::after{
+  content:"You’ve got this.";
+  display:inline-block;
+  margin-left:16px;
+  font-family:"Caveat",cursive;
+  font-size:.34em;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:0;
+  color:var(--razor);
+  transform:rotate(-4deg) translateY(-8px);
+  white-space:nowrap;
+}
+
+.standfirst{
+  color:var(--ink-mid);
+  max-width:66ch;
+}
+
+.standfirst strong{
+  color:var(--navy-deep);
+  font-weight:800;
+}
+
+/* ---------- progress ---------- */
+
+.meter{
+  margin-top:32px;
+  gap:14px;
+}
+
+.meter-track{
+  height:10px;
+  background:#E7DFD3;
+  border:1px solid rgba(18,32,60,.08);
+}
+
+.meter-fill{
+  background:var(--razor);
+}
+
+.meter-label{
+  color:var(--navy);
+}
+
+.meter-label b{
+  color:var(--razor);
+}
+
+.reset-btn{
+  border-color:rgba(18,32,60,.24);
+  color:var(--navy);
+  background:rgba(255,255,255,.55);
+}
+
+.reset-btn:hover{
+  border-color:var(--razor);
+  color:var(--razor);
+}
+
+/* ---------- hackathon: energetic event card ---------- */
+
+.hackathon{
+  margin-top:-16px;
+  z-index:5;
+  background:var(--butter);
+  border-radius:2px;
+  padding:30px 34px;
+  box-shadow:9px 9px 0 var(--navy-deep);
+  transform:rotate(.3deg);
+}
+
+.hack-when{
+  border-right:2px solid rgba(18,32,60,.25);
+}
+
+.hack-date{
+  font-size:2.35rem;
+  font-weight:900;
+  letter-spacing:-.03em;
+}
+
+.hack-body h3{
+  font-size:1.45rem;
+  font-weight:850;
+  letter-spacing:-.02em;
+}
+
+.hack-body p{
+  color:#473A12;
+}
+
+.hack-note{
+  color:#5F501D;
+}
+
+/* ---------- sections ---------- */
+
+.phase{
+  margin-top:72px;
+}
+
+.phase-head{
+  position:relative;
+  margin-bottom:10px;
+}
+
+.phase-num{
+  color:var(--razor);
+  margin-bottom:9px;
+}
+
+.phase-head h2{
+  color:var(--navy-deep);
+  font-size:clamp(1.8rem,4vw,2.55rem);
+}
+
+.phase-note{
+  color:var(--ink-mid);
+  margin-bottom:30px;
+}
+
+/* ---------- lanes ---------- */
+
+.lanes{
+  gap:24px;
+}
+
+.lane{
+  border:1px solid var(--rule);
+  border-radius:3px;
+  box-shadow:0 14px 28px -22px rgba(18,32,60,.35);
+  overflow:hidden;
+}
+
+.lane-ua{
+  border-top:7px solid var(--razor);
+}
+
+.lane-cimba{
+  border-top:7px solid var(--navy);
+}
+
+.lane-head{
+  padding:23px 24px 18px;
+  background:#fff;
+}
+
+.lane-ua .lane-head{
+  background:linear-gradient(180deg, rgba(247,218,223,.62), #fff);
+}
+
+.lane-cimba .lane-head{
+  background:linear-gradient(180deg, rgba(191,215,242,.55), #fff);
+}
+
+.lane-tag{
+  border-radius:0;
+  padding:5px 8px;
+  font-size:10px;
+  font-weight:500;
+}
+
+.lane-head h3{
+  color:var(--navy-deep);
+  font-size:1.45rem;
+  font-weight:850;
+  letter-spacing:-.025em;
+}
+
+.step{
+  padding:18px 22px;
+  transition:background .15s, transform .15s;
+}
+
+.step:hover{
+  background:#FFFDFC;
+}
+
+.box{
+  width:23px;
+  height:23px;
+  border-radius:3px;
+  border-color:#CFC8BD;
+}
+
+.step input:checked ~ .box{
+  background:var(--butter);
+  border-color:var(--gold);
+}
+
+.step-title{
+  font-weight:800;
+  color:var(--navy-deep);
+}
+
+.step-detail{
+  color:var(--ink-mid);
+}
+
+.step input:checked ~ .step-body .step-title{
+  text-decoration-color:var(--coral);
+}
+
+a{
+  color:var(--navy);
+  text-decoration-color:var(--gold);
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+}
+
+.lane-ua a{
+  color:var(--razor);
+}
+
+code{
+  background:#FFF0B8;
+  border-radius:2px;
+}
+
+/* ---------- junction: clear, memorable handoff ---------- */
+
+.junction{
+  margin-top:32px;
+  border-radius:2px;
+  border:2px dashed #CFC8BD;
+  padding:34px;
+  background:#fff;
+  box-shadow:7px 7px 0 rgba(18,32,60,.08);
+}
+
+.junction::after{
+  content:"the handoff ↘";
+  position:absolute;
+  right:28px;
+  top:-28px;
+  font-family:"Caveat",cursive;
+  font-size:1.55rem;
+  font-weight:700;
+  color:var(--razor);
+  transform:rotate(-4deg);
+  background:var(--paper);
+  padding:0 6px;
+}
+
+.junction-tag{
+  color:var(--razor);
+}
+
+.junction h3{
+  color:var(--navy-deep);
+  font-size:1.5rem;
+  font-weight:850;
+  letter-spacing:-.02em;
+}
+
+.junction.lit{
+  border-color:var(--gold);
+  background:#FFF7C9;
+  box-shadow:8px 8px 0 var(--gold);
+}
+
+/* ---------- phase two ---------- */
+
+.lane-wide{
+  border:1px solid var(--rule);
+  border-top:7px solid var(--gold);
+  border-radius:3px;
+  box-shadow:0 14px 28px -22px rgba(18,32,60,.35);
+}
+
+/* ---------- gotchas: still serious, but not corporate ---------- */
+
+.gotchas{
+  position:relative;
+  margin-top:72px;
+  background:var(--navy-deep);
+  color:#D7DEEA;
+  border-radius:3px;
+  padding:40px 36px;
+  box-shadow:10px 10px 0 var(--coral);
+}
+
+.gotchas::before{
+  content:"worth knowing";
+  position:absolute;
+  right:28px;
+  top:-28px;
+  font-family:"Caveat",cursive;
+  font-size:1.65rem;
+  font-weight:700;
+  color:var(--razor);
+  background:var(--paper);
+  padding:0 8px;
+  transform:rotate(3deg);
+}
+
+.gotchas .phase-num{
+  color:var(--gold);
+}
+
+.gotchas h2{
+  font-size:clamp(1.8rem,4vw,2.45rem);
+}
+
+.gotcha strong{
+  color:#fff;
+  font-weight:800;
+}
+
+/* ---------- parent note: deliberately calmer ---------- */
+
+.parents{
+  margin-top:34px;
+  border-left:7px solid var(--gold);
+  background:#fff;
+  border-radius:0;
+  padding:28px 30px;
+  box-shadow:0 12px 28px -24px rgba(18,32,60,.4);
+}
+
+.parents::before{
+  content:"For parents";
+  display:inline-block;
+  margin-bottom:10px;
+  font-family:"DM Mono",monospace;
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--razor);
+}
+
+.parents h3{
+  color:var(--navy-deep);
+  font-size:1.28rem;
+  font-weight:850;
+  letter-spacing:-.02em;
+}
+
+/* ---------- footer ---------- */
+
+footer{
+  margin-top:64px;
+  border-top:2px solid var(--navy-deep);
+  padding-top:26px;
+}
+
+ul.faculty span{
+  font-weight:800;
+}
+
+.colophon{
+  color:var(--navy);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width:820px){
+  header.masthead{
+    padding:46px 0 56px;
+  }
+
+  header.masthead h1{
+    max-width:10ch;
+  }
+
+  header.masthead h1::after{
+    display:block;
+    width:max-content;
+    margin:16px 0 0 4px;
+    font-size:.38em;
+    transform:rotate(-4deg);
+  }
+
+  .hackathon{
+    margin-top:-7px;
+    box-shadow:7px 7px 0 var(--navy-deep);
+  }
+
+  .junction::after{
+    right:18px;
+  }
+
+  .gotchas{
+    box-shadow:7px 7px 0 var(--coral);
+  }
+}
+
+@media (max-width:520px){
+  header.masthead h1{
+    font-size:clamp(2.8rem,15vw,4rem);
+  }
+
+  .hackathon{
+    padding:26px 24px;
+  }
+
+  .hack-when{
+    border-right:0;
+    border-bottom:2px solid rgba(18,32,60,.2);
+    padding:0 0 18px;
+    width:100%;
+  }
+
+  .junction{
+    padding:28px 24px;
+  }
+
+  .junction::after{
+    position:relative;
+    display:block;
+    top:auto;
+    right:auto;
+    width:max-content;
+    margin:-47px 0 20px auto;
+    background:var(--paper);
+  }
+
+  .gotchas{
+    padding:34px 26px;
+  }
+
+  .gotchas::before{
+    right:16px;
+  }
+
+  .parents{
+    padding:24px 22px;
+  }
+}
+
+/* Keep the original print treatment clean and practical. */
+@media print{
+  header.masthead{
+    background:#fff;
+    border-top:0;
+  }
+
+  header.masthead::after,
+  header.masthead h1::after,
+  .junction::after,
+  .gotchas::before{
+    display:none;
+  }
+
+  .hackathon,
+  .gotchas,
+  .junction,
+  .parents,
+  .lane,
+  .lane-wide{
+    transform:none;
+    box-shadow:none;
+  }
+}
