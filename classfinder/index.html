@@ -63,24 +63,24 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
 .lede { max-width: 66ch; margin: 0; color: var(--ink-mid); font-size: clamp(1rem,1.4vw,1.15rem); }
 .semester-note { max-width: 66ch; margin: 20px 0 0; color: var(--ink-mid); font-size: .9rem; }
 .hero-callout { position: relative; align-self: center; padding: 22px 24px; border-radius: 11px; background: var(--gold); color: var(--navy-deep); box-shadow: 9px 9px 0 var(--navy-deep); transform: rotate(3deg); }
-.hero-callout::before { content: '↗'; position: absolute; right: -18px; top: -35px; color: var(--razor); font: 700 2.4rem/1 var(--hand); transform: rotate(12deg); }
 .hero-callout .callout-label { display: block; margin-bottom: 14px; font: 500 .67rem/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
 .hero-callout strong { display: block; font: 900 2.65rem/1 var(--serif); }
 .hero-callout span { display: block; font-size: .96rem; font-weight: 800; }
+.hero-callout .date-mark { position: relative; display: inline-block; margin: 0 5px 0 2px; font: inherit; white-space: nowrap; }
+.hero-callout .date-mark::after { content: ''; position: absolute; inset: -5px -8px; border: 2px solid var(--razor); border-radius: 50%; transform: rotate(-8deg); pointer-events: none; }
 .hero-callout hr { border: 0; border-top: 1px solid #12203c55; margin: 15px 0; }
 .shell { max-width: 1080px; margin: 0 auto; padding: 0 24px 82px; }
-.steps { position: relative; z-index: 2; margin: -27px 0 0; padding: 30px 34px 34px; background: var(--butter); border-radius: 2px; box-shadow: 9px 9px 0 var(--navy-deep); transform: rotate(.3deg); }
+.steps { position: relative; z-index: 2; margin: 76px 0 0; padding: 30px 34px 34px; background: var(--butter); border-radius: 2px; box-shadow: 9px 9px 0 var(--navy-deep); transform: rotate(.3deg); }
 .steps h2 { margin: 0 0 22px; font-size: clamp(1.8rem,3.3vw,2.45rem); font-weight: 850; line-height: 1.12; letter-spacing: -.03em; }
 .timeline { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 34px; list-style: none; margin: 0; padding: 0; }
 .timeline li { display: grid; grid-template-columns: 34px minmax(0,1fr); align-items: start; gap: 13px; min-width: 0; }
 .timeline .num { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--navy-deep); border-radius: 50%; background: var(--cream); color: var(--navy-deep); font: 800 1rem/1 var(--serif); }
 .timeline strong { display: block; color: var(--navy-deep); font-size: .97rem; line-height: 1.3; font-weight: 800; }
 .timeline p { margin: 5px 0 0; color: #493e1e; font-size: .87rem; line-height: 1.45; }
-.workspace { margin-top: 76px; }
+.workspace { margin-top: 64px; }
 .selection-panel { padding: 30px 34px 34px; border: 1px solid var(--rule); border-top: 7px solid var(--razor); border-radius: 3px; background: linear-gradient(180deg,rgba(247,218,223,.62),#fff 145px); box-shadow: 0 14px 28px -22px rgba(18,32,60,.35); }
-.panel-top h2,.results-head h2 { margin: 0; font-size: clamp(1.8rem,4vw,2.55rem); font-weight: 850; line-height: 1.1; letter-spacing: -.03em; }
-.picker { margin-top: 25px; }
-.picker h3 { margin: 0 0 4px; font-size: 1.22rem; font-weight: 800; letter-spacing: -.02em; }
+.picker h2,.results-head h2 { margin: 0; font-size: clamp(1.8rem,4vw,2.55rem); font-weight: 850; line-height: 1.1; letter-spacing: -.03em; }
+.picker h2 { margin-bottom: 8px; }
 .group-label { margin: 0 0 13px; color: var(--ink-mid); font-size: .9rem; }
 .chip-grid { display: flex; flex-wrap: wrap; gap: 9px; }
 .chip-grid button { min-height: 42px; padding: 9px 13px; border: 1px solid #CFC8BD; border-radius: 3px; background: #fff; color: var(--navy-deep); font-size: .88rem; font-weight: 700; line-height: 1.25; cursor: pointer; transition: border-color .15s, background .15s, box-shadow .15s, transform .15s; }
@@ -88,7 +88,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
 .chip-grid button[aria-pressed="true"]::before { content: '✓'; display: inline-block; margin-right: 7px; font-weight: 800; }
 .major-grid button[aria-pressed="true"] { border-color: var(--razor); background: var(--razor-soft); color: var(--razor); }
 .interest-grid button[aria-pressed="true"] { border-color: var(--navy); background: #E7EFF9; color: var(--navy-deep); }
-.picker + .picker { padding-top: 22px; border-top: 1px solid var(--rule); }
+.picker + .picker { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--rule); }
 .results { margin-top: 73px; }
 .results-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
 .reset-link { padding: 8px 12px; border: 1px solid #CFC8BD; border-radius: 99px; background: rgba(255,255,255,.6); color: var(--navy); font: 500 .69rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
@@ -136,9 +136,9 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
   h1 { font-size: clamp(2.75rem,13vw,4rem); max-width: 12ch; }
   .hero-callout { width: min(100%,260px); justify-self: start; }
   .shell { padding: 0 18px 54px; }
-  .steps { margin-top: -14px; padding: 26px 24px; box-shadow: 7px 7px 0 var(--navy-deep); }
+  .steps { margin-top: 62px; padding: 26px 24px; box-shadow: 7px 7px 0 var(--navy-deep); }
   .timeline { grid-template-columns: 1fr; gap: 19px; }
-  .workspace { margin-top: 64px; }
+  .workspace { margin-top: 52px; }
   .selection-panel { padding: 25px 23px; }
   .results { margin-top: 62px; }
   .course-card { padding: 21px; }
@@ -148,7 +148,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
   body { background: #fff; }
   .topline,.hero::after { display: none; }
   .hero { padding-bottom: 28px; }
-  .steps { margin: 0; transform: none; }
+  .steps { margin: 30px 0 0; transform: none; }
   .hero-callout,.steps,.selection-panel,.course-card { box-shadow: none; break-inside: avoid; }
   .course-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
@@ -169,7 +169,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
       <p class="semester-note">Planning a full semester instead (fall or spring)? See <a href="https://www.cimbaitaly.com/undergraduate-study-abroad/current-courses">CIMBA's current course list</a>.</p>
       </div>
       <div class="hero-callout" aria-label="Two classes, six credit hours">
-        <span class="callout-label">Summer 2027 at a glance</span>
+        <span class="callout-label"><span class="date-mark">Summer 2027</span> at a glance</span>
         <div><strong>2</strong><span>classes in Italy</span></div>
         <hr>
         <div><strong>6</strong><span>credit hours total</span></div>
@@ -178,22 +178,10 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
   </div>
 </header>
 <main class="shell">
-
-  <section class="steps" aria-labelledby="stepsTitle">
-    <h2 id="stepsTitle">How the schedule comes together</h2>
-    <ol class="timeline">
-      <li><span class="num">1</span><div><strong>Rank four classes</strong><p>On the Hogs Abroad DICE form, before you leave (Jan&ndash;Feb).</p></div></li>
-      <li><span class="num">2</span><div><strong>Hogs Abroad verifies the transfer</strong><p>Before CIMBA finalizes anything, Hogs Abroad checks how, and whether, each course actually transfers. Mostly paperwork if you picked from the list below.</p></div></li>
-      <li><span class="num">3</span><div><strong>CIMBA confirms your two</strong><p>You'll hear back on your final schedule in Mar&ndash;Apr.</p></div></li>
-      <li><span class="num">4</span><div><strong>Credit transfers to UA</strong><p>Two 3&#8209;credit&#8209;hour courses, six credit hours total, earned through the University of Iowa.</p></div></li>
-    </ol>
-  </section>
-
   <div class="workspace">
     <aside class="selection-panel" aria-label="Personalize your course options">
-      <div class="panel-top"><h2>Make it yours</h2></div>
       <section class="picker" aria-labelledby="majorTitle">
-        <h3 id="majorTitle">What's your major?</h3>
+        <h2 id="majorTitle">What's your major?</h2>
         <p class="group-label" id="majorHelp">Choose as many as apply to find your closest matches below</p>
         <div class="chip-grid major-grid" role="group" aria-labelledby="majorTitle" aria-describedby="majorHelp">
           <button type="button" data-major="finance" aria-pressed="false">Finance</button>
@@ -207,7 +195,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
         </div>
       </section>
       <section class="picker" aria-labelledby="interestTitle">
-        <h3 id="interestTitle">What sounds interesting?</h3>
+        <h2 id="interestTitle">What sounds interesting?</h2>
         <p class="group-label">Pick as many as you want to find classes that sound like you</p>
         <div class="chip-grid interest-grid" id="interestGrid" role="group" aria-labelledby="interestTitle"></div>
       </section>
@@ -220,11 +208,21 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
       <div class="course-grid" id="courseGrid"></div>
     </section>
     <details class="all-courses" id="allCourses">
-      <summary id="allCoursesTitle">Browse all CIMBA courses</summary>
+      <summary id="allCoursesTitle">Browse all CIMBA summer courses</summary>
       <p id="allCoursesHelp">Browse the complete list of Summer 2027 courses.</p>
       <div class="course-grid" id="allCourseGrid"></div>
     </details>
   </div>
+
+  <section class="steps" aria-labelledby="stepsTitle">
+    <h2 id="stepsTitle">How the schedule comes together</h2>
+    <ol class="timeline">
+      <li><span class="num">1</span><div><strong>Rank four classes</strong><p>On the Hogs Abroad DICE form, before you leave (Jan&ndash;Feb).</p></div></li>
+      <li><span class="num">2</span><div><strong>Hogs Abroad verifies the transfer</strong><p>Before CIMBA finalizes anything, Hogs Abroad checks how, and whether, each course actually transfers. Mostly paperwork if you picked from the courses you've explored here.</p></div></li>
+      <li><span class="num">3</span><div><strong>CIMBA confirms your two</strong><p>You'll hear back on your final schedule in Mar&ndash;Apr.</p></div></li>
+      <li><span class="num">4</span><div><strong>Credit transfers to UA</strong><p>Two 3&#8209;credit&#8209;hour courses, six credit hours total, earned through the University of Iowa.</p></div></li>
+    </ol>
+  </section>
 </main>
 <script>
   var majorLabels = {
@@ -372,7 +370,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
     var allCourses = document.getElementById('allCourses');
     allCourses.hidden = others.length === 0;
     document.getElementById('allCoursesTitle').textContent = browsingAll ?
-      'Browse all ' + others.length + ' CIMBA courses' : 'See ' + others.length + ' other CIMBA ' + (others.length === 1 ? 'course' : 'courses');
+      'Browse all ' + others.length + ' CIMBA summer courses' : 'See ' + others.length + ' other CIMBA summer ' + (others.length === 1 ? 'course' : 'courses');
     document.getElementById('allCoursesHelp').textContent = browsingAll ?
       'Browse the complete list of Summer 2027 courses.' :
       'These courses do not match your current selections, but you can still explore them.';
