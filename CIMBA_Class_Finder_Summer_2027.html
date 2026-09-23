@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF8EC">
+<meta name="description" content="Explore CIMBA Italy Summer 2027 classes and see how each course is expected to transfer to the University of Arkansas.">
+<title>Find Your CIMBA Classes | Summer 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,650;9..144,800;9..144,900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1F3864;
+  --navy-deep: #12203C;
+  --gold: #F5A800;
+  --butter: #FFD84D;
+  --razor: #9D2235;
+  --razor-soft: #FBEBED;
+  --coral: #F26B5B;
+  --sky: #BFD7F2;
+  --pink: #F7DADF;
+  --cream: #FFF8EC;
+  --paper: #F7F3EB;
+  --card: #FFFFFF;
+  --ink: #171A24;
+  --ink-mid: #525A6B;
+  --rule: #DED8CD;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+  --hand: 'Caveat', cursive;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(157,34,53,.055) .7px, transparent .8px);
+  background-size: 52px 52px;
+  color: var(--ink);
+  font: 400 1rem/1.55 var(--sans);
+}
+button { font: inherit; }
+a { color: var(--navy); text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--razor); }
+:focus-visible { outline: 3px solid var(--razor); outline-offset: 3px; }
+::selection { background: var(--butter); color: var(--navy-deep); }
+[hidden] { display: none !important; }
+.topline { height: 10px; background: var(--razor); }
+.hero { position: relative; isolation: isolate; overflow: hidden; padding: 0 24px 96px; background: var(--cream); color: var(--navy-deep); }
+.hero::after { content: ''; position: absolute; z-index: 1; left: -3%; right: -3%; bottom: -22px; height: 42px; background: var(--razor); transform: rotate(-1deg); transform-origin: left center; }
+.hero-inner { position: relative; z-index: 2; max-width: 1032px; margin: 0 auto; }
+.site-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 55px 0 28px; }
+.brand { display: inline-block; max-width: 100%; padding: 7px 11px; border: 1px solid rgba(157,34,53,.14); background: #fff; color: var(--razor); box-shadow: 4px 4px 0 var(--pink); transform: rotate(-.6deg); font: 500 .65rem/1.4 var(--mono); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; }
+.back-link { margin-top: 5px; color: var(--navy); font: 500 .7rem/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.back-link::before { content: '← '; }
+.hero-content { display: grid; grid-template-columns: minmax(0,1fr) 232px; align-items: center; gap: clamp(30px,5vw,70px); }
+.hero-copy { min-width: 0; }
+h1,h2,h3 { font-family: var(--serif); color: var(--navy-deep); }
+h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); font-weight: 900; line-height: .94; letter-spacing: -.045em; }
+.lede { max-width: 66ch; margin: 0; color: var(--ink-mid); font-size: clamp(1rem,1.4vw,1.15rem); }
+.semester-note { max-width: 66ch; margin: 20px 0 0; color: var(--ink-mid); font-size: .9rem; }
+.hero-callout { position: relative; align-self: center; padding: 22px 24px; border-radius: 11px; background: var(--gold); color: var(--navy-deep); box-shadow: 9px 9px 0 var(--navy-deep); transform: rotate(3deg); }
+.hero-callout::before { content: '↗'; position: absolute; right: -18px; top: -35px; color: var(--razor); font: 700 2.4rem/1 var(--hand); transform: rotate(12deg); }
+.hero-callout .callout-label { display: block; margin-bottom: 14px; font: 500 .67rem/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.hero-callout strong { display: block; font: 900 2.65rem/1 var(--serif); }
+.hero-callout span { display: block; font-size: .96rem; font-weight: 800; }
+.hero-callout hr { border: 0; border-top: 1px solid #12203c55; margin: 15px 0; }
+.shell { max-width: 1080px; margin: 0 auto; padding: 0 24px 82px; }
+.steps { position: relative; z-index: 2; margin: -27px 0 0; padding: 30px 34px 34px; background: var(--butter); border-radius: 2px; box-shadow: 9px 9px 0 var(--navy-deep); transform: rotate(.3deg); }
+.steps h2 { margin: 0 0 22px; font-size: clamp(1.8rem,3.3vw,2.45rem); font-weight: 850; line-height: 1.12; letter-spacing: -.03em; }
+.timeline { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 34px; list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 34px minmax(0,1fr); align-items: start; gap: 13px; min-width: 0; }
+.timeline .num { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--navy-deep); border-radius: 50%; background: var(--cream); color: var(--navy-deep); font: 800 1rem/1 var(--serif); }
+.timeline strong { display: block; color: var(--navy-deep); font-size: .97rem; line-height: 1.3; font-weight: 800; }
+.timeline p { margin: 5px 0 0; color: #493e1e; font-size: .87rem; line-height: 1.45; }
+.workspace { margin-top: 76px; }
+.selection-panel { padding: 30px 34px 34px; border: 1px solid var(--rule); border-top: 7px solid var(--razor); border-radius: 3px; background: linear-gradient(180deg,rgba(247,218,223,.62),#fff 145px); box-shadow: 0 14px 28px -22px rgba(18,32,60,.35); }
+.panel-top h2,.results-head h2 { margin: 0; font-size: clamp(1.8rem,4vw,2.55rem); font-weight: 850; line-height: 1.1; letter-spacing: -.03em; }
+.picker { margin-top: 25px; }
+.picker h3 { margin: 0 0 4px; font-size: 1.22rem; font-weight: 800; letter-spacing: -.02em; }
+.group-label { margin: 0 0 13px; color: var(--ink-mid); font-size: .9rem; }
+.chip-grid { display: flex; flex-wrap: wrap; gap: 9px; }
+.chip-grid button { min-height: 42px; padding: 9px 13px; border: 1px solid #CFC8BD; border-radius: 3px; background: #fff; color: var(--navy-deep); font-size: .88rem; font-weight: 700; line-height: 1.25; cursor: pointer; transition: border-color .15s, background .15s, box-shadow .15s, transform .15s; }
+.chip-grid button:hover { border-color: var(--razor); transform: translateY(-1px); box-shadow: 0 3px 0 #12203c18; }
+.chip-grid button[aria-pressed="true"]::before { content: '✓'; display: inline-block; margin-right: 7px; font-weight: 800; }
+.major-grid button[aria-pressed="true"] { border-color: var(--razor); background: var(--razor-soft); color: var(--razor); }
+.interest-grid button[aria-pressed="true"] { border-color: var(--navy); background: #E7EFF9; color: var(--navy-deep); }
+.picker + .picker { padding-top: 22px; border-top: 1px solid var(--rule); }
+.results { margin-top: 73px; }
+.results-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.reset-link { padding: 8px 12px; border: 1px solid #CFC8BD; border-radius: 99px; background: rgba(255,255,255,.6); color: var(--navy); font: 500 .69rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.reset-link:hover { border-color: var(--razor); color: var(--razor); }
+.match-note { margin: 24px 0 0; padding: 17px 20px; border-left: 6px solid var(--gold); background: #fff; color: var(--navy-deep); font-size: .92rem; box-shadow: 0 12px 28px -24px rgba(18,32,60,.4); }
+.course-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 28px; }
+.course-card { display: flex; flex-direction: column; min-width: 0; padding: 24px; border: 1px solid var(--rule); border-top: 7px solid var(--navy); border-radius: 3px; background: #fff; box-shadow: 0 14px 28px -22px rgba(18,32,60,.35); }
+.course-card.is-match { border-top-color: var(--razor); box-shadow: 0 14px 28px -18px rgba(157,34,53,.3); }
+.badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.badge { display: inline-block; padding: 5px 8px; border-radius: 0; font: 500 .66rem/1.25 var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+.badge-major { background: var(--razor-soft); color: var(--razor); }
+.badge-interest { background: #E7EFF9; color: var(--navy); }
+.course-card h3 { margin: 0 0 8px; font-size: 1.48rem; font-weight: 850; line-height: 1.15; letter-spacing: -.025em; }
+.course-code { margin: 0 0 17px; color: var(--navy); font: 500 .76rem/1.5 var(--mono); }
+.course-card .prereq { margin: 0 0 13px; color: var(--ink-mid); font-size: .87rem; }
+.course-card .prereq strong { color: var(--ink); }
+.course-card .note { margin: 0 0 14px; padding: 9px 11px; background: #FFF0B8; color: #604913; font-size: .84rem; font-weight: 700; }
+.course-card .desc { margin: 0 0 16px; font-size: .95rem; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; }
+.tag { padding: 4px 7px; background: #E7EFF9; color: var(--navy); font-size: .74rem; font-weight: 600; }
+.transfer-block { margin-top: auto; padding-top: 15px; border-top: 1px solid var(--rule); }
+.transfer-line { margin: 0 0 9px; font-size: .86rem; line-height: 1.45; }
+.transfer-line:last-child { margin-bottom: 0; }
+.transfer-line strong { display: block; color: var(--ink-mid); font: 500 .72rem/1.5 var(--mono); letter-spacing: .03em; text-transform: uppercase; }
+.transfer-line.counts { font-weight: 700; }
+.credit-warning { margin: auto 0 0; padding: 12px; background: var(--razor-soft); color: var(--razor); font-size: .87rem; line-height: 1.45; font-weight: 700; }
+@media (max-width: 820px) {
+  .site-header { padding-top: 42px; }
+  .hero-content { grid-template-columns: minmax(0,1fr) 210px; gap: 32px; }
+  h1 { font-size: clamp(2.8rem,7vw,4.4rem); }
+  .course-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .hero { padding: 0 18px 72px; }
+  .site-header { flex-wrap: wrap; padding: 36px 0 26px; }
+  .brand { font-size: .61rem; }
+  .back-link { margin: 0; }
+  .hero-content { grid-template-columns: 1fr; gap: 28px; }
+  h1 { font-size: clamp(2.75rem,13vw,4rem); max-width: 12ch; }
+  .hero-callout { width: min(100%,260px); justify-self: start; }
+  .shell { padding: 0 18px 54px; }
+  .steps { margin-top: -14px; padding: 26px 24px; box-shadow: 7px 7px 0 var(--navy-deep); }
+  .timeline { grid-template-columns: 1fr; gap: 19px; }
+  .workspace { margin-top: 64px; }
+  .selection-panel { padding: 25px 23px; }
+  .results { margin-top: 62px; }
+  .course-card { padding: 21px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print {
+  body { background: #fff; }
+  .topline,.hero::after { display: none; }
+  .hero { padding-bottom: 28px; }
+  .steps { margin: 0; transform: none; }
+  .hero-callout,.steps,.selection-panel,.course-card { box-shadow: none; break-inside: avoid; }
+  .course-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+</style>
+</head>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="hero">
+  <div class="hero-inner">
+    <nav class="site-header" aria-label="Site navigation">
+      <a class="brand" href="https://cimbahogs.com/">CIMBA Italy · Summer 2027 · University of Arkansas</a>
+      <a class="back-link" href="https://cimbahogs.com/">Back to CIMBAHOGS</a>
+    </nav>
+    <div class="hero-content">
+      <div class="hero-copy">
+      <h1>What CIMBA classes are right for me?</h1>
+      <p class="lede">You'll take two 3-credit-hour classes during the Summer 2027 session. Tell us your major and what sounds interesting, and we'll show you what fits, and exactly how each course is expected to land on your U of A transcript.</p>
+      <p class="semester-note">Planning a full semester instead (fall or spring)? See <a href="https://www.cimbaitaly.com/undergraduate-study-abroad/current-courses">CIMBA's current course list</a>.</p>
+      </div>
+      <div class="hero-callout" aria-label="Two classes, six credit hours">
+        <span class="callout-label">Summer 2027 at a glance</span>
+        <div><strong>2</strong><span>classes in Italy</span></div>
+        <hr>
+        <div><strong>6</strong><span>credit hours total</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="shell">
+
+  <section class="steps" aria-labelledby="stepsTitle">
+    <h2 id="stepsTitle">How the schedule comes together</h2>
+    <ol class="timeline">
+      <li><span class="num">1</span><div><strong>Rank four classes</strong><p>On the Hogs Abroad DICE form, before you leave (Jan&ndash;Feb).</p></div></li>
+      <li><span class="num">2</span><div><strong>Hogs Abroad verifies the transfer</strong><p>Before CIMBA finalizes anything, Hogs Abroad checks how, and whether, each course actually transfers. Mostly paperwork if you picked from the list below.</p></div></li>
+      <li><span class="num">3</span><div><strong>CIMBA confirms your two</strong><p>You'll hear back on your final schedule in Mar&ndash;Apr.</p></div></li>
+      <li><span class="num">4</span><div><strong>Credit transfers to UA</strong><p>Two 3&#8209;credit&#8209;hour courses, six credit hours total, earned through the University of Iowa.</p></div></li>
+    </ol>
+  </section>
+
+  <div class="workspace">
+    <aside class="selection-panel" aria-label="Personalize your course options">
+      <div class="panel-top"><h2>Make it yours</h2></div>
+      <section class="picker" aria-labelledby="majorTitle">
+        <h3 id="majorTitle">What's your major?</h3>
+        <p class="group-label" id="majorHelp">Choose as many as apply to highlight your closest matches below</p>
+        <div class="chip-grid major-grid" role="group" aria-labelledby="majorTitle" aria-describedby="majorHelp">
+          <button type="button" data-major="finance" aria-pressed="false">Finance</button>
+          <button type="button" data-major="scm" aria-pressed="false">Supply Chain Management</button>
+          <button type="button" data-major="marketing" aria-pressed="false">Marketing</button>
+          <button type="button" data-major="management" aria-pressed="false">Management</button>
+          <button type="button" data-major="sevi" aria-pressed="false">SEVI</button>
+          <button type="button" data-major="accounting" aria-pressed="false">Accounting</button>
+          <button type="button" data-major="isys" aria-pressed="false">Information Systems (ISYS)</button>
+          <button type="button" data-major="other" aria-pressed="false">Not in Walton / undeclared</button>
+        </div>
+      </section>
+      <section class="picker" aria-labelledby="interestTitle">
+        <h3 id="interestTitle">What sounds interesting?</h3>
+        <p class="group-label">Pick as many as you want &mdash; nothing below gets hidden either way</p>
+        <div class="chip-grid interest-grid" id="interestGrid" role="group" aria-labelledby="interestTitle"></div>
+      </section>
+    </aside>
+
+    <section class="results" aria-labelledby="resultsTitle">
+      <div class="results-head"><h2 id="resultsTitle">Your CIMBA options</h2><button type="button" class="reset-link" id="resetBtn">Clear selections</button></div>
+      <p class="match-note" id="matchNote" role="status" hidden></p>
+      <div class="course-grid" id="courseGrid"></div>
+    </section>
+  </div>
+</main>
+<script>
+  var majorLabels = {
+    finance: "Finance", scm: "Supply Chain Management", marketing: "Marketing",
+    management: "Management", sevi: "SEVI", accounting: "Accounting",
+    isys: "Information Systems", other: "your major"
+  };
+
+  var interestTags = [
+    "Global business & economics", "Marketing & consumer behavior", "Finance & investing",
+    "Leadership & management", "Law & policy", "Writing & communication",
+    "Engineering & science", "Something totally different"
+  ];
+
+  // CIMBA-side details: University of Iowa catalog. UA-side "uaCode" and
+  // "counts" come verbatim from Walton's official DICE transfer guide.
+  var courses = [
+    { title: "Introduction to Marketing Strategy", code: "MKTG:3000", prereq: "Principles of Microeconomics",
+      desc: "The foundations of marketing strategy and buyer behavior.",
+      tags: ["Marketing & consumer behavior"], majors: ["marketing"],
+      uaCode: "MKTG 34303 \u2013 Introduction to Marketing", counts: "Business core course" },
+
+    { title: "International Marketing", code: "MKTG:4300", prereq: "Introduction to Marketing Strategy",
+      desc: "How culture, politics, and local regulation shape marketing strategy outside the U.S.",
+      tags: ["Marketing & consumer behavior", "Global business & economics"], majors: ["marketing"],
+      uaCode: "MKTG 46303 \u2013 Global Marketing", counts: "Jr/Sr business elective or MKTG major/minor elective" },
+
+    { title: "Contemporary Topics in Marketing: The Global Consumer", code: "MKTG:4000", prereq: "Introduction to Marketing Strategy",
+      note: "Limited seats, separate spring application required.",
+      desc: "How consumers shop differently across regions, from Latin America to the Pacific Rim.",
+      tags: ["Marketing & consumer behavior"], majors: ["marketing"],
+      uaCode: "MKTG 3990T \u2013 MKTG Transfer Course", counts: "Jr/Sr business elective or MKTG major/minor elective" },
+
+    { title: "Social Media Marketing", code: "JMC:3530", prereq: "None",
+      desc: "Social media strategy and best practices, applied to real brands and organizations.",
+      tags: ["Marketing & consumer behavior", "Writing & communication"], majors: ["marketing"],
+      uaCode: "MKTG 47303 \u2013 Social Media and Marketing", counts: "Jr/Sr business elective or MKTG major/minor elective" },
+
+    { title: "Introduction to Management", code: "MGMT:2100", prereq: "None",
+      desc: "The fundamentals of leading people and organizations: decision-making, structure, and team leadership.",
+      tags: ["Leadership & management"], majors: ["sevi"],
+      uaCode: "SEVI 20503 \u2013 Business Foundations", counts: "Pre-business core course" },
+
+    { title: "Topics in Management: Business Risk and Innovation - AI and Law", code: "MGMT:4000", prereq: "None listed",
+      desc: "How AI is reshaping business law, taught by a practicing lawyer, from copyright to agentic-AI liability.",
+      tags: ["Law & policy", "Leadership & management"], majors: ["isys"],
+      uaCode: "ISYS 4990T \u2013 ISYS Transfer Course", counts: "Jr/Sr business elective or ISYS 3000/4000 elective or Data and Cybersecurity minor elective" },
+
+    { title: "Introduction to Law", code: "MGMT:2000", prereq: "None",
+      desc: "A broad look at how law shapes economic and social life.",
+      tags: ["Law & policy"], majors: [],
+      uaCode: "OMGT 43103 \u2013 Law & Ethics", counts: "General education elective, or Legal Studies minor elective" },
+
+    { title: "Introductory Financial Management", code: "FINN:3000", prereq: "Financial Accounting, Micro & Macroeconomics",
+      desc: "Valuing stocks and bonds, weighing risk and return, and the fundamentals of corporate financial decision-making.",
+      tags: ["Finance & investing", "Global business & economics"], majors: ["finance"],
+      uaCode: "FINN 20403 \u2013 Principles of Finance", counts: "Business core course" },
+
+    { title: "Global Economics & Business", code: "ECON:3345", prereq: "Microeconomics & Macroeconomics",
+      desc: "How trade patterns, exchange rates, and the balance of payments play out across countries.",
+      tags: ["Global business & economics"], majors: [],
+      uaCode: "ECON 46303 \u2013 International Trade", counts: "Jr/Sr business elective or ECON major/minor elective" },
+
+    { title: "Classical Mythology", code: "CLSA:2016", prereq: "None",
+      desc: "A survey of Greek and Roman mythology, from creation myths through the founding of Rome, using works like the Iliad and the Aeneid.",
+      tags: ["Something totally different"], majors: [],
+      uaCode: "CLST 23203 \u2013 Greek and Roman Mythology", counts: "General education elective" },
+
+    { title: "Italy Live", code: "ITAL:1050", prereq: "Not listed in the DICE guide",
+      desc: "Description not yet gathered from CIMBA \u2014 worth requesting a syllabus if you want more than the title.",
+      tags: ["Something totally different"], majors: [],
+      uaCode: "ITAL 1990T \u2013 ITAL Transfer Course", counts: "General education elective" },
+
+    { title: "Business Writing", code: "BUS:3800", prereq: "None (Rhetoric/Comp recommended)",
+      desc: "Persuasive business communication built around real PR projects, open to any major.",
+      tags: ["Writing & communication"], majors: [],
+      uaCode: null, counts: null, warning: "This is a genuinely useful course for developing real-world writing skills, but unfortunately does not transfer to the UA." },
+
+    { title: "Engineering Fundamentals: Thermodynamics", code: "ENGR:2130", prereq: "Chemistry I & Physics I",
+      desc: "Core thermodynamics for engineers: the first and second laws, the Carnot cycle, and real-world engineering applications.",
+      tags: ["Engineering & science"], majors: [],
+      notCovered: true }
+  ];
+
+
+  var state = { majors: new Set(), interests: new Set() };
+
+  function loadInterestChips() {
+    var grid = document.getElementById('interestGrid');
+    grid.innerHTML = interestTags.map(function (tag) {
+      return '<button type="button" data-tag="' + tag + '" aria-pressed="false">' + tag + '</button>';
+    }).join('');
+    grid.querySelectorAll('button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var tag = btn.dataset.tag;
+        if (state.interests.has(tag)) { state.interests.delete(tag); btn.setAttribute('aria-pressed', 'false'); }
+        else { state.interests.add(tag); btn.setAttribute('aria-pressed', 'true'); }
+        render();
+      });
+    });
+  }
+
+  function transferHTML(c) {
+    if (c.notCovered) return '';
+    if (c.warning) return '<p class="credit-warning">' + c.warning + '</p>';
+    return '<div class="transfer-block">' +
+      '<p class="transfer-line"><strong>UA equivalent:</strong> ' + c.uaCode + '</p>' +
+      '<p class="transfer-line counts"><strong>Counts as:</strong> ' + c.counts + '</p>' +
+      '</div>';
+  }
+
+  function cardHTML(c) {
+    var majorHit = c.majors.some(function (major) { return state.majors.has(major); });
+    var interestHit = c.tags.some(function (t) { return state.interests.has(t); });
+    var majorBadge = state.majors.size > 1 ? 'Closest to one of your majors' : 'Closest to your major';
+    var badges = (majorHit ? '<span class="badge badge-major">' + majorBadge + '</span>' : '') +
+      (interestHit ? '<span class="badge badge-interest">Matches your interests</span>' : '');
+    return '<article class="course-card' + (majorHit || interestHit ? ' is-match' : '') + '">' +
+      (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
+      '<h3>' + c.title + '</h3>' +
+      '<p class="course-code">3 credit hours &middot; University of Iowa ' + c.code + '</p>' +
+      '<p class="prereq"><strong>Prereq:</strong> ' + c.prereq + '</p>' +
+      (c.note ? '<p class="note">' + c.note + '</p>' : '') +
+      '<p class="desc">' + c.desc + '</p>' +
+      '<div class="tag-row">' + c.tags.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('') + '</div>' +
+      transferHTML(c) + '</article>';
+  }
+
+  function score(c) {
+    var s = 0;
+    if (c.tags.some(function (t) { return state.interests.has(t); })) s += 2;
+    if (c.majors.some(function (major) { return state.majors.has(major); })) s += 1;
+    return s;
+  }
+
+  function render() {
+    var ordered = courses.map(function (c, i) { return { c: c, i: i, s: score(c) }; })
+      .sort(function (a, b) { return b.s - a.s || a.i - b.i; })
+      .map(function (x) { return x.c; });
+    document.getElementById('courseGrid').innerHTML = ordered.map(cardHTML).join('');
+    var note = document.getElementById('matchNote');
+    var notes = [];
+    state.majors.forEach(function (major) {
+      if (major === 'other') return;
+      var matches = courses.filter(function (c) { return c.majors.indexOf(major) !== -1; });
+      if (matches.length) notes.push('Closest to ' + majorLabels[major] + ' this term: ' + matches.map(function (c) { return c.title; }).join(', ') + '.');
+      else if (major === 'management') notes.push('No course transfers specifically into a Management slot this term \u2014 two options titled "Management" actually transfer as SEVI and ISYS credit instead. Every business-focused course below still counts as a Jr/Sr business elective.');
+      else if (state.majors.size > 1) notes.push('No course is marked as a close match for ' + majorLabels[major] + ' this term.');
+      else notes.push('The business-focused options below still count as electives.');
+    });
+    note.hidden = notes.length === 0;
+    note.textContent = notes.join(' ');
+    try { localStorage.setItem('cimba-class-finder', JSON.stringify({ majors: Array.from(state.majors), interests: Array.from(state.interests) })); } catch (e) {}
+  }
+
+  document.querySelectorAll('.major-grid button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var major = btn.dataset.major;
+      if (state.majors.has(major)) state.majors.delete(major);
+      else if (major === 'other') state.majors = new Set(['other']);
+      else { state.majors.delete('other'); state.majors.add(major); }
+      document.querySelectorAll('.major-grid button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(state.majors.has(b.dataset.major)));
+      });
+      render();
+    });
+  });
+  document.getElementById('resetBtn').addEventListener('click', function () {
+    state.majors = new Set();
+    state.interests = new Set();
+    document.querySelectorAll('.chip-grid button').forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+    try { localStorage.removeItem('cimba-class-finder'); } catch (e) {}
+    render();
+  });
+
+  loadInterestChips();
+  try {
+    var saved = JSON.parse(localStorage.getItem('cimba-class-finder') || 'null');
+    if (saved) {
+      var savedMajors = Array.isArray(saved.majors) ? saved.majors : (saved.major ? [saved.major] : []);
+      savedMajors.forEach(function (major) {
+        if (Object.prototype.hasOwnProperty.call(majorLabels, major)) state.majors.add(major);
+      });
+      if (state.majors.size > 1) state.majors.delete('other');
+      document.querySelectorAll('.major-grid button').forEach(function (btn) {
+        btn.setAttribute('aria-pressed', String(state.majors.has(btn.dataset.major)));
+      });
+      if (Array.isArray(saved.interests)) saved.interests.forEach(function (t) {
+        if (interestTags.indexOf(t) === -1) return;
+        state.interests.add(t);
+        var ib = document.querySelector('.interest-grid button[data-tag="' + t + '"]');
+        if (ib) ib.setAttribute('aria-pressed', 'true');
+      });
+    }
+  } catch (e) {}
+  render();
+</script>
+</body>
+</html>
