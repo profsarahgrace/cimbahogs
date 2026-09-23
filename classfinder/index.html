@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +94,12 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
 .reset-link { padding: 8px 12px; border: 1px solid #CFC8BD; border-radius: 99px; background: rgba(255,255,255,.6); color: var(--navy); font: 500 .69rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
 .reset-link:hover { border-color: var(--razor); color: var(--razor); }
 .match-note { margin: 24px 0 0; padding: 17px 20px; border-left: 6px solid var(--gold); background: #fff; color: var(--navy-deep); font-size: .92rem; box-shadow: 0 12px 28px -24px rgba(18,32,60,.4); }
+.empty-state { margin: 26px 0 0; padding: 26px; border: 1px dashed var(--rule); background: var(--cream); color: var(--ink-mid); }
+.all-courses { margin-top: 48px; border-top: 1px solid var(--rule); padding-top: 22px; }
+.all-courses summary { width: fit-content; color: var(--navy); font: 800 1.15rem/1.4 var(--serif); cursor: pointer; }
+.all-courses summary:hover { color: var(--razor); }
+.all-courses p { margin: 12px 0 0; color: var(--ink-mid); font-size: .92rem; }
+.all-courses .course-card { border-top-color: var(--navy); }
 .course-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 28px; }
 .course-card { display: flex; flex-direction: column; min-width: 0; padding: 24px; border: 1px solid var(--rule); border-top: 7px solid var(--navy); border-radius: 3px; background: #fff; box-shadow: 0 14px 28px -22px rgba(18,32,60,.35); }
 .course-card.is-match { border-top-color: var(--razor); box-shadow: 0 14px 28px -18px rgba(157,34,53,.3); }
@@ -187,7 +194,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
       <div class="panel-top"><h2>Make it yours</h2></div>
       <section class="picker" aria-labelledby="majorTitle">
         <h3 id="majorTitle">What's your major?</h3>
-        <p class="group-label" id="majorHelp">Choose as many as apply to highlight your closest matches below</p>
+        <p class="group-label" id="majorHelp">Choose as many as apply to find your closest matches below</p>
         <div class="chip-grid major-grid" role="group" aria-labelledby="majorTitle" aria-describedby="majorHelp">
           <button type="button" data-major="finance" aria-pressed="false">Finance</button>
           <button type="button" data-major="scm" aria-pressed="false">Supply Chain Management</button>
@@ -201,7 +208,7 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
       </section>
       <section class="picker" aria-labelledby="interestTitle">
         <h3 id="interestTitle">What sounds interesting?</h3>
-        <p class="group-label">Pick as many as you want &mdash; nothing below gets hidden either way</p>
+        <p class="group-label">Pick as many as you want to find classes that sound like you</p>
         <div class="chip-grid interest-grid" id="interestGrid" role="group" aria-labelledby="interestTitle"></div>
       </section>
     </aside>
@@ -209,8 +216,14 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
     <section class="results" aria-labelledby="resultsTitle">
       <div class="results-head"><h2 id="resultsTitle">Your CIMBA options</h2><button type="button" class="reset-link" id="resetBtn">Clear selections</button></div>
       <p class="match-note" id="matchNote" role="status" hidden></p>
+      <p class="empty-state" id="emptyState" role="status" hidden></p>
       <div class="course-grid" id="courseGrid"></div>
     </section>
+    <details class="all-courses" id="allCourses">
+      <summary id="allCoursesTitle">Browse all CIMBA courses</summary>
+      <p id="allCoursesHelp">Browse the complete list of Summer 2027 courses.</p>
+      <div class="course-grid" id="allCourseGrid"></div>
+    </details>
   </div>
 </main>
 <script>
@@ -323,13 +336,13 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
       '</div>';
   }
 
-  function cardHTML(c) {
+  function cardHTML(c, personalized) {
     var majorHit = c.majors.some(function (major) { return state.majors.has(major); });
     var interestHit = c.tags.some(function (t) { return state.interests.has(t); });
     var majorBadge = state.majors.size > 1 ? 'Closest to one of your majors' : 'Closest to your major';
-    var badges = (majorHit ? '<span class="badge badge-major">' + majorBadge + '</span>' : '') +
-      (interestHit ? '<span class="badge badge-interest">Matches your interests</span>' : '');
-    return '<article class="course-card' + (majorHit || interestHit ? ' is-match' : '') + '">' +
+    var badges = personalized ? (majorHit ? '<span class="badge badge-major">' + majorBadge + '</span>' : '') +
+      (interestHit ? '<span class="badge badge-interest">Matches your interests</span>' : '') : '';
+    return '<article class="course-card' + (personalized ? ' is-match' : '') + '">' +
       (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
       '<h3>' + c.title + '</h3>' +
       '<p class="course-code">3 credit hours &middot; University of Iowa ' + c.code + '</p>' +
@@ -348,19 +361,35 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
   }
 
   function render() {
-    var ordered = courses.map(function (c, i) { return { c: c, i: i, s: score(c) }; })
+    var ranked = courses.map(function (c, i) { return { c: c, i: i, s: score(c) }; });
+    var matches = ranked.filter(function (x) { return x.s > 0; })
       .sort(function (a, b) { return b.s - a.s || a.i - b.i; })
       .map(function (x) { return x.c; });
-    document.getElementById('courseGrid').innerHTML = ordered.map(cardHTML).join('');
+    var others = ranked.filter(function (x) { return x.s === 0; }).map(function (x) { return x.c; });
+    document.getElementById('courseGrid').innerHTML = matches.map(function (c) { return cardHTML(c, true); }).join('');
+    document.getElementById('allCourseGrid').innerHTML = others.map(function (c) { return cardHTML(c, false); }).join('');
+    var browsingAll = matches.length === 0 && state.majors.size === 0 && state.interests.size === 0;
+    var allCourses = document.getElementById('allCourses');
+    allCourses.hidden = others.length === 0;
+    document.getElementById('allCoursesTitle').textContent = browsingAll ?
+      'Browse all ' + others.length + ' CIMBA courses' : 'See ' + others.length + ' other CIMBA ' + (others.length === 1 ? 'course' : 'courses');
+    document.getElementById('allCoursesHelp').textContent = browsingAll ?
+      'Browse the complete list of Summer 2027 courses.' :
+      'These courses do not match your current selections, but you can still explore them.';
+    var empty = document.getElementById('emptyState');
+    empty.hidden = matches.length > 0;
+    empty.textContent = browsingAll ? 'Pick a major or something that sounds interesting above, and your matches will appear here.' :
+      state.majors.has('other') && state.interests.size === 0 ? 'Choose something that sounds interesting to see your matches.' :
+      'No classes directly match those selections this term. Try another interest or browse the other courses below.';
     var note = document.getElementById('matchNote');
     var notes = [];
     state.majors.forEach(function (major) {
       if (major === 'other') return;
       var matches = courses.filter(function (c) { return c.majors.indexOf(major) !== -1; });
       if (matches.length) notes.push('Closest to ' + majorLabels[major] + ' this term: ' + matches.map(function (c) { return c.title; }).join(', ') + '.');
-      else if (major === 'management') notes.push('No course transfers specifically into a Management slot this term \u2014 two options titled "Management" actually transfer as SEVI and ISYS credit instead. Every business-focused course below still counts as a Jr/Sr business elective.');
+      else if (major === 'management') notes.push('No course transfers specifically into a Management slot this term \u2014 the two options titled "Management" transfer as SEVI and ISYS credit instead. Check the course details below for how each one counts.');
       else if (state.majors.size > 1) notes.push('No course is marked as a close match for ' + majorLabels[major] + ' this term.');
-      else notes.push('The business-focused options below still count as electives.');
+      else notes.push('Choose an interest to explore possible matches, or browse the full list below to check how each course transfers.');
     });
     note.hidden = notes.length === 0;
     note.textContent = notes.join(' ');
