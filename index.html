@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +47,7 @@
         "@id": "https://cimbahogs.com/#website"
       },
       "inLanguage": "en-US",
-      "dateModified": "2026-09-10",
+      "dateModified": "2026-09-23",
       "keywords": [
         "CIMBA Italy",
         "CimbaHogs",
@@ -503,16 +504,6 @@ h1 .hog::after{
   transform:rotate(-10deg);
 }
 
-.hero-scribble{
-  position:absolute;
-  right:19%;
-  bottom:120px;
-  font-family:"Caveat",cursive;
-  font-weight:700;
-  font-size:1.5rem;
-  color:var(--razor);
-  transform:rotate(-7deg);
-}
 
 /* ---------- anniversary / party invite ---------- */
 .anniversary-shell{
@@ -766,27 +757,10 @@ h1 .hog::after{
 .rotate-5{transform:rotate(-1.5deg);}
 .rotate-6{transform:rotate(3deg);}
 
-.doodle{
-  position:absolute;
-  pointer-events:none;
-  z-index:6;
-}
 
-.doodle path{stroke:var(--razor);}
-
-.doodle-circle{
-  top:-16px;
-  left:-1%;
-  width:150px;
-  height:120px;
-}
-
-.doodle-arrow{
-  right:4%;
-  bottom:120px;
-  width:150px;
-  height:100px;
-}
+/* Decorative cleanup:
+   The old free-floating hero scribble and scrapbook circle/arrow doodles
+   were removed because they no longer anchored reliably on desktop. */
 
 /* ---------- dates / editorial checklist ---------- */
 .dates{
@@ -1099,7 +1073,6 @@ a:focus-visible{
 
   .hero-note strong{font-size:1.8rem;}
 
-  .hero-scribble,
   .star.two{display:none;}
 
   .anniversary-shell{margin-top:-7px;}
@@ -1167,8 +1140,6 @@ a:focus-visible{
   }
 
   .photo-tag{font-size:1rem;}
-
-  .doodle{display:none;}
 
   .dates{
     margin-top:70px;
@@ -1263,7 +1234,6 @@ a:focus-visible{
 
     <span class="star one" aria-hidden="true">✦</span>
     <span class="star two" aria-hidden="true">✦</span>
-    <span class="hero-scribble" aria-hidden="true">Italy looks good on you ↗</span>
   </div>
 </header>
 
@@ -1294,15 +1264,6 @@ a:focus-visible{
       </div>
 
       <div class="scrapbook-grid">
-        <svg class="doodle doodle-circle" viewBox="0 0 150 120" fill="none" aria-hidden="true">
-          <path d="M75,10 C110,8 138,32 135,62 C132,95 100,112 68,108 C32,104 8,78 14,48 C19,22 45,12 75,10 Z"
-                stroke-width="4" stroke-linecap="round"/>
-        </svg>
-
-        <svg class="doodle doodle-arrow" viewBox="0 0 140 90" fill="none" aria-hidden="true">
-          <path d="M8,70 C40,20 85,12 128,22" stroke-width="4" stroke-linecap="round"/>
-          <path d="M112,10 L128,22 L110,34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
 
         <div class="photo-card retro portrait rotate-1 scrap-1">
           <span class="photo-fill">
