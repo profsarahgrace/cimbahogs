@@ -1,0 +1,35 @@
+{%- assign page_url = page.url | absolute_url -%}
+{%- assign about = site.schema_about -%}
+{%- if page.about_extra -%}{%- assign about = about | concat: page.about_extra -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/' | absolute_url }}#website",
+      "url": "{{ '/' | absolute_url }}",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page_url }}#webpage",
+      "url": "{{ page_url }}",
+      "name": {{ page.schema_name | default: page.title | jsonify }},
+      "description": {{ page.schema_description | default: page.description | jsonify }},
+      "isPartOf": { "@id": "{{ '/' | absolute_url }}#website" },
+      "inLanguage": "en-US",
+      "dateModified": {{ page.date_modified | jsonify }},
+      "keywords": {{ page.keywords | jsonify }},
+      "about": {{ about | jsonify }},
+      "audience": [
+        {%- for a in page.audiences %}
+        { "@type": "Audience", "audienceType": {{ a | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+  ]
+}
+</script>

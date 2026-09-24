@@ -1,0 +1,30 @@
+# Site-wide settings for cimbahogs.com (GitHub Pages / Jekyll)
+title: CimbaHogs
+description: A guide for University of Arkansas students and families exploring CIMBA Italy study abroad.
+url: "https://cimbahogs.com"
+baseurl: ""
+
+# Defaults used by _layouts/default.html when a page doesn't override them
+theme_color: "#FFF8EC"
+og_image: /images/scrap-modern-1.jpg
+og_image_alt: University of Arkansas students participating in CIMBA Italy study abroad
+robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+
+# Entities every page's JSON-LD says it is "about" (pages can add more with about_extra)
+schema_about:
+  - "@type": Thing
+    name: CIMBA Italy
+    url: "https://www.cimbaitaly.com/"
+  - "@type": CollegeOrUniversity
+    name: University of Arkansas
+    url: "https://www.uark.edu/"
+  - "@type": CollegeOrUniversity
+    name: University of Iowa
+    url: "https://uiowa.edu/"
+
+# Keep non-site files out of the published site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
