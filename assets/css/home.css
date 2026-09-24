@@ -22,124 +22,13 @@
 html{scroll-behavior:smooth;}
 
 /* ---------- sitewide nav ---------- */
-.sitenav{
-  background:var(--navy-deep);
-  position:relative;
-  z-index:50;
+
+.sitenav-inner {
+  padding: 14px 0;
 }
 
-.sitenav-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  padding:14px 0;
-}
-
-.sitenav-logo{
-  font-family:"DM Mono",monospace;
-  font-weight:500;
-  font-size:.95rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:#fff;
-  text-decoration:none;
-  white-space:nowrap;
-}
-
-.sitenav-logo span{color:var(--gold);}
-
-.sitenav-links{
-  display:flex;
-  align-items:center;
-  gap:28px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.sitenav-links a{
-  font-family:"DM Sans",sans-serif;
-  font-size:.88rem;
-  font-weight:500;
-  color:#C8D2E4;
-  text-decoration:none;
-  transition:color .15s;
-  white-space:nowrap;
-}
-
-.sitenav-links a:hover{color:#fff;}
-
-.sitenav-links a[aria-current="page"]{
-  color:var(--gold);
-  font-weight:700;
-}
-
-.sitenav-links a.sitenav-cta{
-  background:var(--razor);
-  color:#fff;
-  padding:9px 16px;
-  border-radius:99px;
-  font-weight:700;
-}
-
-.sitenav-links a.sitenav-cta:hover{
-  background:var(--gold);
-  color:var(--navy-deep);
-}
-
-.sitenav-toggle{
-  display:none;
-  background:none;
-  border:0;
-  width:30px;
-  height:22px;
-  position:relative;
-  cursor:pointer;
-  padding:0;
-}
-
-.sitenav-toggle span{
-  display:block;
-  position:absolute;
-  left:0;
-  right:0;
-  height:2px;
-  background:#fff;
-  transition:transform .2s ease, opacity .2s ease;
-}
-
-.sitenav-toggle span:nth-child(1){top:1px;}
-.sitenav-toggle span:nth-child(2){top:10px;}
-.sitenav-toggle span:nth-child(3){top:19px;}
-
-.sitenav.open .sitenav-toggle span:nth-child(1){transform:translateY(9px) rotate(45deg);}
-.sitenav.open .sitenav-toggle span:nth-child(2){opacity:0;}
-.sitenav.open .sitenav-toggle span:nth-child(3){transform:translateY(-9px) rotate(-45deg);}
-
-@media (max-width:700px){
-  .sitenav-toggle{display:block;}
-
-  .sitenav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-    flex-direction:column;
-    align-items:flex-start;
-    background:var(--navy-deep);
-    padding:6px 20px 24px;
-    gap:16px;
-    box-shadow:0 14px 20px -10px rgba(0,0,0,.35);
-  }
-
-  .sitenav.open .sitenav-links{display:flex;}
-
-  .sitenav-links a.sitenav-cta{
-    width:100%;
-    text-align:center;
-  }
+.sitenav-links a[aria-current="page"] {
+  font-weight: 700;
 }
 
 body{
@@ -403,7 +292,6 @@ h1 .hog::after{
   transform:rotate(-10deg);
 }
 
-
 /* ---------- anniversary / party invite ---------- */
 .anniversary-shell{
   position:relative;
@@ -655,7 +543,6 @@ h1 .hog::after{
 .rotate-4{transform:rotate(-2.1deg);}
 .rotate-5{transform:rotate(-1.5deg);}
 .rotate-6{transform:rotate(3deg);}
-
 
 /* Decorative cleanup:
    The old free-floating hero scribble and scrapbook circle/arrow doodles
