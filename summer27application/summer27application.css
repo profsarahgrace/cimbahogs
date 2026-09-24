@@ -55,28 +55,6 @@ button,input,select,textarea{font-family:inherit;}
   padding-right:24px;
 }
 
-/* ---------- sitewide nav ---------- */
-
-.sitenav .wrap {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.sitenav-inner {
-  min-height: 64px;
-}
-
-.sitenav-logo:hover {
-  color: #fff;
-}
-
-.sitenav-links a {
-  transition: color .15s,background .15s;
-}
-.sitenav-links a[aria-current="page"] {
-  color: #fff;
-}
-
 /* ---------- shared type ---------- */
 h1,h2,.hack-date,.hack-body h3,.lane-head h3,.junction h3,.parents h3{
   font-family:"Fraunces",Georgia,serif;
@@ -711,10 +689,6 @@ ul.faculty a{
   .gotchas{box-shadow:7px 7px 0 var(--coral);}
 }
 
-@media (max-width:700px){
-  .sitenav-links{padding:8px 20px 24px;}
-}
-
 @media (max-width:520px){
   .wrap{
     padding-left:18px;
@@ -775,8 +749,6 @@ ul.faculty a{
     background:#fff;
     font-size:11pt;
   }
-
-  .sitenav{display:none;}
 
   header.masthead{
     background:#fff;
