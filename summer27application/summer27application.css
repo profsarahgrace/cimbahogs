@@ -70,7 +70,6 @@ h2{
   letter-spacing:-.03em;
 }
 
-.eyebrow,
 .phase-num,
 .lane-tag,
 .junction-tag,
@@ -87,7 +86,7 @@ header.masthead{
   overflow:hidden;
   background:var(--cream);
   color:var(--navy-deep);
-  padding:64px 0 66px;
+  padding:52px 0 66px;
   border-top:10px solid var(--razor);
 }
 
@@ -106,20 +105,6 @@ header.masthead::after{
 header.masthead .wrap{
   position:relative;
   z-index:2;
-}
-
-header.masthead .eyebrow{
-  display:inline-block;
-  margin:0 0 22px;
-  padding:7px 11px;
-  color:var(--razor);
-  background:#fff;
-  border:1px solid rgba(157,34,53,.14);
-  box-shadow:4px 4px 0 var(--pink);
-  transform:rotate(-.6deg);
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
 }
 
 header.masthead h1{
@@ -662,7 +647,7 @@ ul.faculty a{
   .gotchas-grid{grid-template-columns:1fr;}
 
   header.masthead{
-    padding:46px 0 56px;
+    padding:36px 0 56px;
   }
 
   header.masthead h1{max-width:10ch;}
@@ -765,12 +750,6 @@ ul.faculty a{
     display:none;
   }
 
-  header.masthead .eyebrow{
-    color:var(--razor);
-    box-shadow:none;
-    border:0;
-    padding:0;
-  }
 
   .standfirst{color:#333;}
   .meter{display:none;}
