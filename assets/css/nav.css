@@ -11,6 +11,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 14px 0;
 }
 .sitenav-logo {
   font-family: "DM Mono",monospace;
@@ -39,7 +42,7 @@
   font-weight: 500;
   color: #C8D2E4;
   text-decoration: none;
-  transition: color .15s;
+  transition: color .15s, background .15s;
   white-space: nowrap;
 }
 .sitenav-links a:hover {
@@ -47,6 +50,7 @@
 }
 .sitenav-links a[aria-current="page"] {
   color: var(--gold);
+  font-weight: 700;
 }
 .sitenav-links a.sitenav-cta {
   background: var(--razor);
@@ -120,5 +124,11 @@
   .sitenav-links a.sitenav-cta {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media print {
+  .sitenav {
+    display: none;
   }
 }

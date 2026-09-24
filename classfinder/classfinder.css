@@ -36,16 +36,6 @@ a:hover { color: var(--razor); }
 ::selection { background: var(--butter); color: var(--navy-deep); }
 [hidden] { display: none !important; }
 
-/* ---------- sitewide nav ---------- */
-.sitenav-inner {
-  padding: 14px 0;
-  max-width: 1080px;
-  margin: 0 auto;
-  width: min(1080px, calc(100% - 40px));
-}
-.sitenav-links a[aria-current="page"] {
-  font-weight: 700;
-}
 .topline { height: 10px; background: var(--razor); }
 .hero { position: relative; isolation: isolate; overflow: hidden; padding: 0 24px 96px; background: var(--cream); color: var(--navy-deep); }
 .hero::after { content: ''; position: absolute; z-index: 1; left: -3%; right: -3%; bottom: -22px; height: 42px; background: var(--razor); transform: rotate(-1deg); transform-origin: left center; }
@@ -142,7 +132,6 @@ h1 { max-width: 12ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
 @media print {
   body { background: #fff; }
   .topline,.hero::after { display: none; }
-  .sitenav { display: none; }
   .hero { padding-bottom: 28px; }
   .steps { margin: 30px 0 0; transform: none; }
   .hero-callout,.steps,.selection-panel,.course-card { box-shadow: none; break-inside: avoid; }

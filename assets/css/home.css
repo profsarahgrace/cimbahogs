@@ -21,16 +21,6 @@
 
 html{scroll-behavior:smooth;}
 
-/* ---------- sitewide nav ---------- */
-
-.sitenav-inner {
-  padding: 14px 0;
-}
-
-.sitenav-links a[aria-current="page"] {
-  font-weight: 700;
-}
-
 body{
   margin:0;
   background:
