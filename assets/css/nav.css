@@ -50,7 +50,6 @@
 }
 .sitenav-links a[aria-current="page"] {
   color: var(--gold);
-  font-weight: 700;
 }
 .sitenav-links a.sitenav-cta {
   background: var(--razor);
