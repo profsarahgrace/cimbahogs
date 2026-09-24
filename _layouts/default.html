@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="{{ page.viewport | default: 'width=device-width, initial-scale=1.0' }}">
+<meta name="theme-color" content="{{ site.theme_color }}">
+
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+{%- if page.seo %}
+<meta name="robots" content="{{ site.robots }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ page.og_title | default: page.title | escape }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ site.og_image | absolute_url }}">
+<meta property="og:image:alt" content="{{ site.og_image_alt | escape }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.twitter_title | default: page.og_title | default: page.title | escape }}">
+<meta name="twitter:description" content="{{ page.twitter_description | default: page.og_description | default: page.description | escape }}">
+<meta name="twitter:image" content="{{ site.og_image | absolute_url }}">
+
+{% include jsonld.html %}
+{%- endif %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{%- assign fonts_url = page.fonts | default: "https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Fraunces:opsz,wght@9..144,650;9..144,800;9..144,900&display=swap" -%}
+<link href="{{ fonts_url }}" rel="stylesheet">
+{%- if page.css %}
+<link rel="stylesheet" href="{{ page.css | relative_url }}">
+{%- endif %}
+</head>
+
+<body>
+
+{% include nav.html %}
+
+{{ content }}
+
+</body>
+</html>
