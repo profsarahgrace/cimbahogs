@@ -30,6 +30,22 @@
         {%- endfor %}
       ]
     }
+    {%- if page.video %},
+    {
+      "@type": "VideoObject",
+      "@id": "{{ page_url }}#video",
+      "name": {{ page.video.name | jsonify }},
+      "description": {{ page.video.description | jsonify }},
+      "thumbnailUrl": "{{ page.video.poster | absolute_url }}",
+      "contentUrl": "{{ page.video.file | absolute_url }}",
+      "uploadDate": {{ page.video.upload_date | jsonify }},
+      "duration": {{ page.video.duration | jsonify }},
+      "width": {{ page.video.width }},
+      "height": {{ page.video.height }},
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "{{ page_url }}#webpage" }
+    }
+    {%- endif %}
   ]
 }
 </script>

@@ -6,6 +6,7 @@
 
 - [CimbaHogs home](https://cimbahogs.com/): CIMBA Italy program highlights, the University of Arkansas connection, Summer 2027 dates, and thirty years of CimbaHogs memories.
 - [CIMBA Summer 2027 class finder](https://cimbahogs.com/classfinder/): Interactive tool showing how each CIMBA Italy Summer 2027 course is expected to transfer to the University of Arkansas, filtered by major.
+- [Hear from former CimbaHogs](https://cimbahogs.com/stories/): Video stories from University of Arkansas students sharing their favorite CIMBA Italy memories.
 - [Summer 2027 application guide](https://cimbahogs.com/summer27application/): Step-by-step guidance for completing the University of Arkansas Hogs Abroad process and the CIMBA application.
 
 ## Program context
