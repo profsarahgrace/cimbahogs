@@ -10,6 +10,7 @@ Live pages:
 |---|---|
 | `cimbahogs.com/` | `index.html` |
 | `cimbahogs.com/classfinder/` | `classfinder/index.html` |
+| `cimbahogs.com/stories/` | `stories/index.html` |
 | `cimbahogs.com/summer27application/` | `summer27application/index.html` |
 
 ## How the site is put together
@@ -27,6 +28,7 @@ assets/css/home.css          styles for the home page
 classfinder/classfinder.css                   styles for the class finder
 summer27application/summer27application.css  styles for the application guide
 images/                      photos (the social-sharing image is images/scrap-modern-1.jpg)
+videos/                      web-ready videos (H.264 MP4). Keep them small; never commit the original camera file
 CNAME                        tells GitHub Pages the custom domain. Do not delete or edit.
 sitemap.xml, robots.txt, llms.txt   hand-maintained (see "Keep these in sync")
 ```
@@ -68,6 +70,15 @@ date_modified: "2026-09-23"             # JSON-LD dateModified: update by hand, 
 keywords: ["...", "..."]                # JSON-LD keywords
 audiences: ["..."]                      # JSON-LD audience
 about_extra: [...]                      # optional extra JSON-LD "about" entities
+video:                                  # optional; adds VideoObject JSON-LD (see stories/index.html)
+  file: "/videos/name.mp4"
+  poster: "/images/poster.jpg"
+  name: "..."
+  description: "..."
+  upload_date: "2026-09-24"
+  duration: "PT1M4S"                    # ISO 8601 duration
+  width: 540
+  height: 960
 viewport: "..."                         # optional; overrides the default viewport tag
 fonts: "https://fonts.googleapis.com/..." # optional; overrides the default Google Fonts URL
 ---
@@ -109,6 +120,14 @@ there. To test first:
 
 There is no local preview: the Ruby that ships with macOS is too old to run Jekyll.
 The test build on GitHub is the check.
+
+## Adding a video
+
+Don't commit the original file: camera and phone exports are tens of MB and stay in git
+history forever. Re-encode to H.264 MP4 first (roughly 1 Mbps for a 540x960 vertical
+video works well, about 9 MB per minute), put it in `videos/`, and add a poster image in
+`images/`. See `stories/index.html` for the markup (`preload="none"` keeps the page fast).
+Get the creator's permission and confirm any music is cleared for web use.
 
 ## Gotchas
 
