@@ -12,6 +12,7 @@ Live pages:
 | `cimbahogs.com/classfinder/` | `classfinder/index.html` |
 | `cimbahogs.com/stories/` | `stories/index.html` |
 | `cimbahogs.com/parents/` | `parents/index.html` |
+| `cimbahogs.com/scholarships/` | `scholarships/index.html` |
 | `cimbahogs.com/summer27application/` | `summer27application/index.html` |
 
 ## How the site is put together
@@ -29,6 +30,7 @@ assets/css/home.css          styles for the home page
 classfinder/classfinder.css                   styles for the class finder
 summer27application/summer27application.css  styles for the application guide
 parents/parents.css                          styles for the parents page
+scholarships/scholarships.css                styles for the scholarships page
 images/                      photos (the social-sharing image is images/scrap-modern-1.jpg)
 videos/                      web-ready videos (H.264 MP4). Keep them small; never commit the original camera file
 CNAME                        tells GitHub Pages the custom domain. Do not delete or edit.
