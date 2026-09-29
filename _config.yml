@@ -22,6 +22,10 @@ schema_about:
     name: University of Iowa
     url: "https://uiowa.edu/"
 
+# Cloudflare Web Analytics (Analytics & Logs > Web Analytics at dash.cloudflare.com).
+# No cookies, no consent banner needed. Dashboard is at the same URL, login required.
+cloudflare_analytics_token: "d2e140e0874d47159e355ce09fccf54d"
+
 # Keep non-site files out of the published site
 exclude:
   - README.md
