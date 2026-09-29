@@ -69,3 +69,42 @@ h1 { max-width: 14ch; margin: 0 0 22px; font-size: clamp(3.1rem,6.2vw,5rem); fon
   .hero { padding-bottom: 28px; }
   .reel { box-shadow: none; transform: none; }
 }
+
+/* advice quote wall, one-word cloud, classroom pull-quote, weekend favorites */
+.advice, .oneword, .classroom, .travelfaves { margin-top: 96px; }
+.advice .eyebrow, .oneword .eyebrow, .classroom .eyebrow, .travelfaves .eyebrow { margin: 0 0 12px; font: 500 .72rem/1.4 var(--mono); letter-spacing: .15em; text-transform: uppercase; color: var(--razor); }
+.advice h2, .oneword h2, .classroom h2, .travelfaves h2 { margin: 0 0 14px; max-width: 20ch; font-size: clamp(1.9rem,4vw,2.7rem); font-weight: 850; line-height: 1.02; letter-spacing: -.03em; }
+.section-lede { max-width: 52ch; margin: 0 0 32px; color: var(--ink-mid); font-size: 1.05rem; }
+.quote-wall { columns: 3 260px; column-gap: 24px; }
+.q { position: relative; break-inside: avoid; margin: 0 0 24px; padding: 32px 22px 22px; box-shadow: 0 16px 28px -20px rgba(18,32,60,.45); }
+.q::before { content: "\201C"; position: absolute; top: 2px; left: 14px; font: 900 3rem/1 var(--serif); color: var(--razor); }
+.q p { margin: 0; font: 600 1rem/1.45 var(--serif); color: var(--navy-deep); }
+.q:nth-child(3n+1) { transform: rotate(-.7deg); }
+.q:nth-child(3n+2) { transform: rotate(.6deg); }
+.q.butter { background: var(--butter); }
+.q.sky { background: #BFD7F2; }
+.q.pink { background: var(--pink); }
+.q.mint { background: #CDE7D7; }
+.wordcloud { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; }
+.wordcloud li { font-family: var(--serif); font-weight: 800; letter-spacing: -.02em; color: var(--navy); }
+.wordcloud .w1 { font-size: 1.1rem; color: var(--ink-mid); }
+.wordcloud .w2 { font-size: 1.5rem; }
+.wordcloud .w3 { font-size: 2.1rem; color: var(--razor); }
+.wordcloud .w4 { font-size: 2.8rem; color: var(--navy-deep); }
+.wordcloud li:nth-child(3n) { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 4px; text-underline-offset: 5px; }
+.pull { max-width: 720px; margin: 24px 0 0; padding: 8px 0 8px 26px; border-left: 6px solid var(--gold); }
+.pull p { margin: 0 0 12px; font: 500 1.2rem/1.5 var(--serif); color: var(--navy-deep); }
+.pull cite { font: 500 .78rem/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; font-style: normal; color: var(--ink-mid); }
+.fave-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 720px; margin-top: 24px; }
+.fave-cols > div { padding: 22px 26px; background: #fff; border-top: 5px solid var(--gold); box-shadow: 0 16px 28px -22px rgba(18,32,60,.45); }
+.fave-cols h3 { margin: 0 0 10px; font: 800 1.15rem var(--serif); color: var(--navy-deep); }
+.fave-cols ul { margin: 0; padding-left: 1.2em; }
+.fave-cols li { margin-bottom: 5px; }
+.parent-nudge { margin-top: 84px; padding: 22px 26px; background: var(--cream); border-left: 6px solid var(--razor); font-weight: 600; }
+.parent-nudge p { margin: 0; }
+@media (max-width: 650px) {
+  .advice, .oneword, .classroom, .travelfaves { margin-top: 72px; }
+  .fave-cols { grid-template-columns: 1fr; }
+  .wordcloud .w4 { font-size: 2.2rem; }
+}
+@media print { .q { transform: none; } }
