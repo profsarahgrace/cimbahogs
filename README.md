@@ -142,6 +142,13 @@ Get the creator's permission and confirm any music is cleared for web use.
 - **Don't edit `CNAME`.** Changing it breaks the custom domain.
 - **This README is not published.** `_config.yml` excludes it from the built site.
 
+## Analytics
+
+Cloudflare Web Analytics is on every page via `_layouts/default.html`, driven by
+`cloudflare_analytics_token` in `_config.yml`. It's cookie-free, so no consent banner is
+needed. View stats at dash.cloudflare.com > Analytics & Logs > Web Analytics (login
+required). To turn it off, remove `cloudflare_analytics_token` from `_config.yml`.
+
 ## Tools
 
 Git, plus the GitHub CLI (`gh`, installed at `~/bin/gh` and on the PATH). `gh auth status`
