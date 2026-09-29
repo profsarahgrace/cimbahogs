@@ -8,6 +8,7 @@
 - [CIMBA Summer 2027 class finder](https://cimbahogs.com/classfinder/): Interactive tool showing how each CIMBA Italy Summer 2027 course is expected to transfer to the University of Arkansas, filtered by major.
 - [Hear from former CimbaHogs](https://cimbahogs.com/stories/): Video stories, advice, and weekend-travel favorites from University of Arkansas students who studied at CIMBA Italy.
 - [CIMBA Italy for parents and families](https://cimbahogs.com/parents/): Answers for Arkansas families on program cost and inclusions, CIMBA scholarships, housing, insurance, weekend travel, credit transfer, and who to contact.
+- [CIMBA Italy scholarships and funding](https://cimbahogs.com/scholarships/): One guide to CIMBA scholarships, University of Arkansas study abroad scholarships, the Honors College Study Abroad Grant, financial aid, and summer deadlines.
 - [Summer 2027 application guide](https://cimbahogs.com/summer27application/): Step-by-step guidance for completing the University of Arkansas Hogs Abroad process and the CIMBA application.
 
 ## Program context
@@ -20,5 +21,7 @@
 ## Relevant primary sources
 
 - [CIMBA Italy](https://www.cimbaitaly.com/)
+- [University of Arkansas study abroad funding](https://studyabroad.uark.edu/fund/)
+- [Honors College global experiences](https://honors.uark.edu/global-experiences/)
 - [University of Iowa — CIMBA Italy](https://students.tippie.uiowa.edu/undergraduates/tippie-rise/study-abroad/locations/cimba-italy)
 - [University of Arkansas Hogs Abroad](https://hogsabroad.uark.edu/)

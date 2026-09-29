@@ -100,6 +100,11 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
+@media (min-width:701px) and (max-width:900px) {
+  .sitenav-links { gap: 16px; }
+  .sitenav-links a.sitenav-cta { padding: 8px 12px; }
+}
+
 @media (max-width:700px) {
   .sitenav-toggle {
     display: block;

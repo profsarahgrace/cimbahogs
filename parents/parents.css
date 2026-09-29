@@ -52,7 +52,7 @@ section { scroll-margin-top: 24px; }
 .shell > section + section { margin-top: 96px; }
 
 /* trust strip */
-.trust { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.trust { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .stat { padding: 22px 20px; background: #fff; border-top: 5px solid var(--gold); box-shadow: 0 18px 35px -24px rgba(18,32,60,.42); }
 .stat strong { display: block; font: 900 2.6rem/1 var(--serif); letter-spacing: -.03em; color: var(--razor); margin-bottom: 8px; }
 .stat span { display: block; font-size: .9rem; color: var(--ink-mid); line-height: 1.4; }
@@ -138,7 +138,7 @@ footer { margin-top: 88px; padding-top: 28px; border-top: 1.5px solid var(--rule
 .colophon { margin: 0; font: 500 .72rem/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mid); }
 
 @media (max-width: 900px) {
-  .trust, .faculty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .faculty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .voice-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 650px) {
@@ -162,7 +162,7 @@ footer { margin-top: 88px; padding-top: 28px; border-top: 1.5px solid var(--rule
 
 /* partnership, accreditation, safety, corporate */
 .partnership-section, .safety-section, .corporate-section { margin-top: 96px; }
-.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .pillar { padding: 24px 22px; background: #fff; border-top: 5px solid var(--razor); box-shadow: 0 18px 30px -22px rgba(18,32,60,.42); }
 .pillar h3 { margin: 0 0 10px; font-size: 1.12rem; font-weight: 800; line-height: 1.2; }
 .pillar p { margin: 0; font-size: .92rem; color: var(--ink-mid); }
@@ -186,7 +186,7 @@ footer { margin-top: 88px; padding-top: 28px; border-top: 1.5px solid var(--rule
 .corporate-copy h2 { margin: 0 0 16px; font-size: clamp(1.8rem,3.6vw,2.5rem); font-weight: 850; line-height: 1.04; letter-spacing: -.03em; }
 .corporate-copy p:not(.eyebrow) { margin: 0 0 14px; color: var(--ink-mid); }
 @media (max-width: 900px) {
-  .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pillars { grid-template-columns: 1fr; }
   .safety-grid, .corporate-section { grid-template-columns: 1fr; }
   .corporate-photo { max-width: 300px; }
 }
@@ -195,3 +195,8 @@ footer { margin-top: 88px; padding-top: 28px; border-top: 1.5px solid var(--rule
   .safety-list, .campus-card, .accreditation { padding: 22px 20px; }
 }
 @media print { .campus-card, .corporate-photo { transform: none; } }
+
+.aid-more { margin: 36px 0 0; }
+
+.campus-card img { display: block; width: 100%; height: auto; margin: -4px 0 18px; box-shadow: 0 8px 18px -10px rgba(18,32,60,.5); }
+@media (max-width: 650px) { .trust { grid-template-columns: 1fr; } }
