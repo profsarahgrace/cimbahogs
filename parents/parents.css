@@ -169,6 +169,20 @@ footer { margin-top: 88px; padding-top: 28px; border-top: 1.5px solid var(--rule
 .accreditation { margin-top: 40px; padding: 26px 30px; background: var(--navy-deep); color: #fff; box-shadow: 8px 8px 0 var(--gold); }
 .accreditation h3 { margin: 0 0 10px; color: var(--butter); font-size: 1.3rem; }
 .accreditation p { margin: 0; max-width: 78ch; color: #E4EAF5; }
+.travel-block { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; align-items: center; margin-bottom: 36px; }
+.travel-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.travel-photos figure { margin: 0; padding: 6px 6px 22px; background: #fff; box-shadow: 0 14px 24px -16px rgba(18,32,60,.5); }
+.travel-photos figure:first-child { grid-column: 1 / -1; transform: rotate(-.9deg); }
+.travel-photos figure:nth-child(2) { transform: rotate(1.2deg); }
+.travel-photos figure:nth-child(3) { transform: rotate(-.7deg); }
+.travel-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.travel-photos figure:first-child img { aspect-ratio: 750 / 666; }
+.travel-lists { padding: 26px 28px; background: #fff; border-top: 5px solid var(--gold); box-shadow: 0 18px 30px -22px rgba(18,32,60,.42); }
+.travel-lists h3 { margin: 0 0 14px; font-size: 1.3rem; }
+.fave-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.fave-cols h4 { margin: 0 0 8px; font: 500 .72rem/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--razor); }
+.fave-cols ul { margin: 0; padding-left: 1.1em; }
+.fave-cols li { margin-bottom: 4px; font-size: .93rem; }
 .safety-grid { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 28px; align-items: start; }
 .safety-list { padding: 28px 30px; background: var(--mint); }
 .safety-list h3, .campus-card h3 { margin: 0 0 14px; font-size: 1.3rem; }
@@ -187,7 +201,7 @@ footer { margin-top: 88px; padding-top: 28px; border-top: 1.5px solid var(--rule
 .corporate-copy p:not(.eyebrow) { margin: 0 0 14px; color: var(--ink-mid); }
 @media (max-width: 900px) {
   .pillars { grid-template-columns: 1fr; }
-  .safety-grid, .corporate-section { grid-template-columns: 1fr; }
+  .safety-grid, .corporate-section, .travel-block { grid-template-columns: 1fr; }
   .corporate-photo { max-width: 300px; }
 }
 @media (max-width: 650px) {
