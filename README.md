@@ -11,7 +11,7 @@ Live pages:
 | `cimbahogs.com/` | `index.html` |
 | `cimbahogs.com/classfinder/` | `classfinder/index.html` |
 | `cimbahogs.com/stories/` | `stories/index.html` |
-| `cimbahogs.com/parents/` | `parents/index.html` |
+| `cimbahogs.com/program/` | `program/index.html` |
 | `cimbahogs.com/scholarships/` | `scholarships/index.html` |
 | `cimbahogs.com/summer27application/` | `summer27application/index.html` |
 
@@ -29,7 +29,7 @@ assets/css/nav.css           navbar styles shared by every page
 assets/css/home.css          styles for the home page
 classfinder/classfinder.css                   styles for the class finder
 summer27application/summer27application.css  styles for the application guide
-parents/parents.css                          styles for the parents page
+program/program.css                          styles for the program info page
 scholarships/scholarships.css                styles for the scholarships page
 images/                      photos (the social-sharing image is images/scrap-modern-1.jpg)
 videos/                      web-ready videos (H.264 MP4). Keep them small; never commit the original camera file
@@ -83,7 +83,7 @@ video:                                  # optional; adds VideoObject JSON-LD (se
   duration: "PT1M4S"                    # ISO 8601 duration
   width: 540
   height: 960
-faq:                                    # optional; q/a pairs the page renders into FAQPage JSON-LD (see parents/index.html)
+faq:                                    # optional; q/a pairs the page renders into FAQPage JSON-LD (see program/index.html)
   - q: "..."
     a: "..."
 viewport: "..."                         # optional; overrides the default viewport tag

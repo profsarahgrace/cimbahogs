@@ -1018,8 +1018,8 @@ a:focus-visible{
   footer{margin-top:70px;}
 }
 
-/* ---------- parents teaser ---------- */
-.parents-teaser{
+/* ---------- program teaser ---------- */
+.program-teaser{
   max-width:860px;
   margin:96px auto 0;
   padding:34px clamp(22px,4vw,44px) 38px;
@@ -1027,8 +1027,8 @@ a:focus-visible{
   border-left:8px solid var(--razor);
   box-shadow:var(--shadow);
 }
-.parents-teaser .eyebrow{color:var(--razor);margin-bottom:11px;}
-.parents-teaser h2{color:var(--navy-deep);font-size:clamp(1.7rem,3.6vw,2.4rem);max-width:22ch;}
-.parents-teaser p:not(.eyebrow){color:var(--ink-mid);max-width:50ch;margin:15px 0 28px;}
-.parents-teaser .cta::after{content:"\2192";}
-@media (max-width:620px){.parents-teaser{margin-top:72px;}}
+.program-teaser .eyebrow{color:var(--razor);margin-bottom:11px;}
+.program-teaser h2{color:var(--navy-deep);font-size:clamp(1.7rem,3.6vw,2.4rem);max-width:22ch;}
+.program-teaser p:not(.eyebrow){color:var(--ink-mid);max-width:50ch;margin:15px 0 28px;}
+.program-teaser .cta::after{content:"\2192";}
+@media (max-width:620px){.program-teaser{margin-top:72px;}}
