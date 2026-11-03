@@ -607,6 +607,66 @@ code{
 }
 .lane-wide ol.steps li .step{padding:18px 24px;}
 
+/* ---------- class finder link ---------- */
+.finder-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px 28px;
+  flex-wrap:wrap;
+  margin:0 0 24px;
+  padding:24px 28px;
+  background:var(--navy-deep);
+  color:#D7DEEA;
+  border-radius:3px;
+  box-shadow:7px 7px 0 var(--gold);
+  text-decoration:none;
+  transition:transform .15s,box-shadow .15s;
+}
+.finder-cta:hover{
+  color:#D7DEEA;
+  transform:translate(-2px,-2px);
+  box-shadow:9px 9px 0 var(--gold);
+}
+.finder-cta:focus-visible{outline:3px solid var(--gold);outline-offset:4px;}
+
+.finder-cta-text{
+  flex:1 1 320px;
+  display:block;
+}
+.finder-cta-tag{
+  display:block;
+  margin-bottom:6px;
+  color:var(--gold);
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.finder-cta strong{
+  display:block;
+  margin-bottom:4px;
+  color:#fff;
+  font-family:"Fraunces",Georgia,serif;
+  font-size:1.4rem;
+  font-weight:850;
+  letter-spacing:-.02em;
+}
+.finder-cta-text > span:last-child{
+  display:block;
+  max-width:62ch;
+  font-size:.92rem;
+}
+.finder-cta-go{
+  flex:0 0 auto;
+  padding:12px 20px;
+  background:var(--butter);
+  color:var(--navy-deep);
+  font-weight:800;
+  font-size:.95rem;
+  border-radius:2px;
+}
+
 /* ---------- gotchas ---------- */
 .gotchas{
   position:relative;
