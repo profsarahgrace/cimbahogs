@@ -289,7 +289,7 @@ main.wrap{
 
 /* ---------- status decoder ---------- */
 .decoder{
-  margin:0 0 24px;
+  margin:40px 0 0;
   padding:26px 28px 28px;
   background:var(--card);
   border:1px solid var(--rule);
@@ -311,7 +311,6 @@ main.wrap{
   color:var(--ink-mid);
   font-size:.93rem;
 }
-.decoder-note strong{color:var(--navy-deep);}
 
 .decoder-grid{
   display:grid;
