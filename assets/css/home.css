@@ -165,7 +165,30 @@ h1 .hog::after{
   font-size:clamp(1.08rem,2vw,1.28rem);
   color:var(--ink-mid);
   max-width:48ch;
-  margin:0 0 30px;
+  margin:0 0 20px;
+}
+
+.hero-nudge{
+  max-width:48ch;
+  margin:0 0 26px;
+  padding:14px 18px;
+  background:var(--butter);
+  border-left:6px solid var(--razor);
+  box-shadow:5px 5px 0 rgba(18,32,60,.14);
+  color:var(--navy-deep);
+  font-size:1rem;
+  line-height:1.4;
+  transform:rotate(-.5deg);
+}
+
+.hero-nudge strong{
+  display:block;
+  margin-bottom:2px;
+  font-family:"Fraunces",Georgia,serif;
+  font-size:1.2rem;
+  font-weight:850;
+  letter-spacing:-.01em;
+  color:var(--razor);
 }
 
 .hero-actions{
