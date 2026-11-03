@@ -287,6 +287,101 @@ main.wrap{
   font-size:.97rem;
 }
 
+/* ---------- status decoder ---------- */
+.decoder{
+  margin:0 0 24px;
+  padding:26px 28px 28px;
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-top:7px solid var(--gold);
+  border-radius:3px;
+  box-shadow:0 14px 28px -22px rgba(18,32,60,.35);
+}
+.decoder h3{
+  margin:0 0 6px;
+  color:var(--navy-deep);
+  font-family:"Fraunces",Georgia,serif;
+  font-size:1.35rem;
+  font-weight:850;
+  letter-spacing:-.02em;
+}
+.decoder-note{
+  max-width:68ch;
+  margin:0 0 20px;
+  color:var(--ink-mid);
+  font-size:.93rem;
+}
+.decoder-note strong{color:var(--navy-deep);}
+
+.decoder-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+.decoder-col{
+  padding:16px 18px 6px;
+  border-top:4px solid var(--razor);
+  background:var(--razor-soft);
+}
+.decoder-cimba{
+  border-top-color:var(--navy);
+  background:#EEF3FA;
+}
+.decoder-tag{
+  margin:0 0 8px;
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--razor);
+}
+.decoder-cimba .decoder-tag{color:var(--navy);}
+
+.decoder dl{margin:0;}
+.decoder dt{
+  margin-top:12px;
+  color:var(--navy-deep);
+  font-size:.95rem;
+  font-weight:800;
+}
+.decoder dt::before{
+  content:"";
+  display:inline-block;
+  width:8px;
+  height:8px;
+  margin-right:8px;
+  border-radius:50%;
+  background:var(--razor);
+}
+.decoder-cimba dt::before{background:var(--navy);}
+.decoder dd{
+  margin:2px 0 14px 16px;
+  color:var(--ink-mid);
+  font-size:.88rem;
+}
+
+/* ---------- heads-up callout ---------- */
+.heads-up{
+  max-width:72ch;
+  margin:0 0 30px;
+  padding:18px 22px;
+  background:var(--razor-soft);
+  border-left:7px solid var(--razor);
+}
+.heads-up strong{
+  display:block;
+  margin-bottom:4px;
+  color:var(--razor);
+  font-size:1rem;
+  font-weight:800;
+}
+.heads-up p{
+  margin:0;
+  color:var(--ink);
+  font-size:.92rem;
+}
+.heads-up a{color:var(--razor);}
+
 /* ---------- two lanes ---------- */
 .lanes{
   display:grid;
@@ -644,6 +739,7 @@ ul.faculty a{
 /* ---------- responsive ---------- */
 @media (max-width:820px){
   .lanes{grid-template-columns:1fr;}
+  .decoder-grid{grid-template-columns:1fr;}
   .gotchas-grid{grid-template-columns:1fr;}
 
   header.masthead{
