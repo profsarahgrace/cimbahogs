@@ -598,6 +598,7 @@ h1 .hog::after{
 .date-card:nth-child(2){background:var(--pink);transform:rotate(.6deg);}
 .date-card:nth-child(3){background:var(--mint);transform:rotate(.35deg);}
 .date-card:nth-child(4){background:var(--sky);transform:rotate(-.5deg);}
+.date-card:last-child:nth-child(odd){grid-column:1 / -1;}
 
 .date-when{
   display:inline-block;
